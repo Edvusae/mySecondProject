@@ -1,0 +1,155 @@
+body{
+    margin: 0px;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+main h1 {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+p {
+    padding-left: 10px;
+}
+nav{
+    margin-bottom: 10px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: grey;
+    padding: 10px;
+    margin: 0px;
+    text-align: end;
+    overflow: hidden; 
+}
+.navbar a{
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: black;
+}
+.navbar li{
+    float: left;
+}
+.slider{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 3rem;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: wheat;
+    border: none;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    height: 30vh;
+    overflow: hidden;
+}
+.scroll {
+    white-space: nowrap;
+    margin: 10px;
+}
+.scroll div {
+    display: flex;
+    gap: 2em;
+}
+.scroll p {
+    font-size: 5em;
+    color: navy;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 3px;
+}
+.RightToleft {
+    animation: RightToleft 60s infinite linear;
+}
+
+@keyframes RightToleft {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform:translateX(-50%) ;
+    }
+}
+.flex h2{
+    text-align: center;
+}
+.flex h3{
+    text-align: center;
+}
+.flex p {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 50px;
+    margin: auto;
+    padding: 10px auto;
+    opacity: 0.9;
+    overflow: hidden;
+    height: auto;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer {
+    background-color: bisque;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+.footer{
+    text-align: center;
+}
+.footer ul{
+    list-style: none;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer ul a:hover {
+    background-color: hsl(50, 97%, 46%);
+}
