@@ -18,6 +18,9 @@ nav{
     margin-bottom: 10px;
 }
 .navbar ul{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     list-style-type: none;
     background-color: grey;
     padding: 10px;
