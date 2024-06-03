@@ -19,7 +19,7 @@ nav{
 }
 .navbar ul{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-content: center;
     list-style-type: none;
     background-color: grey;
