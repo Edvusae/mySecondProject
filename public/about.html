@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Movie App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container content-section">
+        <section class="about-hero">
+            <h1>About Our Movie App</h1>
+            <p>Your ultimate destination for discovering, managing, and enjoying films.</p>
+        </section>
+
+        <section class="about-mission">
+            <h2>Our Mission</h2>
+            <p>To provide a seamless and intuitive platform for movie enthusiasts to explore trending films, manage their personal movie collections, and get detailed insights into their favorite cinema.</p>
+            <p>We believe in the power of storytelling and aim to connect users with the vast world of movies, making film discovery a delightful experience for everyone.</p>
+        </section>
+
+        <section class="about-story">
+            <h2>Our Story</h2>
+            <div class="story-grid">
+                <div class="story-item">
+                    <h3>The Spark</h3>
+                    <p>Founded by a group of passionate developers and film buffs, our journey began with a simple idea: to build a better way to track movies. Frustrated with scattered information and clunky interfaces, we set out to create a solution that was both powerful and user-friendly.</p>
+                </div>
+                <div class="story-item">
+                    <h3>Growth & Innovation</h3>
+                    <p>From humble beginnings, the Movie App has grown, incorporating feedback from our community and leveraging the latest technologies. We've continuously evolved, adding features like user authentication, personalized collections, and seamless integration with external APIs like TMDB.</p>
+                </div>
+                <div class="story-item">
+                    <h3>Future Vision</h3>
+                    <p>We're constantly striving to enhance your movie experience. Our roadmap includes social features, recommendation engines, and expanded content. Join us as we continue to innovate and bring the world of cinema closer to you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-team">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/007bff/FFFFFF?text=Dev+A" alt="Team Member 1">
+                    <h3>Jane Doe</h3>
+                    <p>Lead Developer</p>
+                    <p>Passionate about clean code and engaging user experiences.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/28a745/FFFFFF?text=Dev+B" alt="Team Member 2">
+                    <h3>John Smith</h3>
+                    <p>UI/UX Designer</p>
+                    <p>Obsessed with intuitive design and beautiful interfaces.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/dc3545/FFFFFF?text=Dev+C" alt="Team Member 3">
+                    <h3>Sarah Lee</h3>
+                    <p>Content Strategist</p>
+                    <p>A true cinephile, ensuring rich and accurate movie data.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/common.js"></script>
+    <script>
+        // Set active link for About Us page
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            const aboutLink = document.getElementById('aboutLink');
+            if (aboutLink) {
+                aboutLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

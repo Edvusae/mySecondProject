@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malengo Hygiene Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+    <div class="container header-content">
+        <a href="index.html" class="logo">
+            <i class="fas fa-film"></i> Movie App
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link active" id="homeLink">Home</a></li>
+                <li><a href="/public/about.html" class="nav-link" id="aboutLink">About Us</a></li>
+                <li><a href="/public/contact.html" class="nav-link" id="contactLink">Contact Us</a></li>
+                <li id="authLinks">
+                    <a href="/public/auth.html" class="nav-link" id="registerLink">Register</a>
+                    <a href="/public/auth.html" class="nav-link" id="loginLink">Login</a>
+                </li>
+                <li id="loggedInUser" style="display: none;">
+                    <span id="welcomeMessage" class="nav-text"></span>
+                    <button id="logoutButton" class="btn btn-secondary">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main>
+        <section class="hero-section">
+            <div class="slider">
+                <div class="slide"><img src="./images/architecture.jpg" alt="Architecture"></div>
+                <div class="slide"><img src="./images/tech.jpg" alt="Technology"></div>
+                <div class="slide"><img src="./images/travel.jpg" alt="Traveling"></div>
+            </div>
+            <div class="scrolling-text">
+                <p>Passionate about Web Development and Frontend Technologies!</p>
+            </div>
+        </section>
+        <section class="languages">
+            <h2>Web Development Languages</h2>
+            <img src="./images/html.png" alt="HTML">
+            <img src="./images/css.png" alt="CSS">
+            <img src="./images/javascript.png" alt="JavaScript">
+            <img src="./images/react.png" alt="React">
+            <img src="./images/nodejs.png" alt="Node.js">
+        </section>
+        <section class="two-column">
+            <div class="column">
+                <img src="./images/web-developer.jpg" alt="Web Developer" style="width: 100%;">
+            </div>
+            <div class="column">
+                <h3>My Passion for Web Development</h3>
+                <p>I love building intuitive and engaging websites. My expertise lies in creating responsive designs and using modern frameworks to develop user-friendly applications.</p>
+            </div>
+        </section>
+        
+        <section class="contact-form">
+            <h3>Contact Us</h3>
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email..">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Interests</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Malengo, Ltd;</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
