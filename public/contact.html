@@ -3,85 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Movie App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contact Me - [Your Name]</title>
+    <link rel="stylesheet" href="/public/css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="contact.html" id="contactLink">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="container content-section">
-        <section class="contact-hero">
-            <h1>Get in Touch</h1>
-            <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+    <main class="contact-page-main">
+        <section class="contact-hero-section">
+            <div class="hero-overlay">
+                <h1>Let's Create Something Amazing.</h1>
+                <p>I'd love to hear from you! Whether you have a project idea, a question, or just want to say hello, feel free to reach out.</p>
+            </div>
         </section>
 
-        <section class="contact-details">
-            <h2>Our Contact Information</h2>
+        <section class="contact-details-section">
+            <h2 class="section-title">Reach Out Directly</h2>
             <div class="contact-info-grid">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:info@movieapp.com">info@movieapp.com</a></p>
+                <div class="info-card">
+                    <i class="fas fa-envelope icon-large"></i>
+                    <h3>Email Me</h3>
+                    <p><a href="mailto:your_email@example.com">your_email@example.com</a></p>
                 </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 (555) 123-4567</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Visit Us</h3>
-                    <p>123 Cinema Lane, Film City, Movieville, 90210</p>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt icon-large"></i>
+                    <h3>Call Me</h3>
+                    <p>+263 77 123 4567</p> </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt icon-large"></i>
+                    <h3>Based In</h3>
+                    <p>Harare, Zimbabwe</p>
                 </div>
             </div>
         </section>
 
         <section class="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            <h2 class="section-title">Send Me a Message</h2>
+            <div class="form-container-card">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or question..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
         </section>
 
-        <section class="contact-map">
-            <h2>Find Us on the Map</h2>
+        <section class="contact-map-section">
+            <h2 class="section-title">My Location</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.2505051996765!2d144.9630578153163!3d-37.81627997975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d612f0a5b9c0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1678234567890!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118815.11890333792!2d30.957584149999998!3d-17.8286955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a3845b7f1411%3A0xc3f6050b1f7e02d!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2szw!4v1722420000000!5m2!1sen!2szw"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
 
-    <script src="js/common.js"></script>
-    <script>
-        // Set active link for Contact Us page
+    <script src="/public/js/script.js"></script> <script>
+        // Specific script for the contact page
         document.addEventListener('DOMContentLoaded', () => {
-            const currentPath = window.location.pathname;
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
+            // Highlight active navigation link
             const contactLink = document.getElementById('contactLink');
             if (contactLink) {
                 contactLink.classList.add('active');
             }
+
+            // Simple form submission handler (client-side only)
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // In a real application, you would send this data to a server
+                // using fetch() or XMLHttpRequest.
+                console.log('Form Submitted!');
+                const formData = new FormData(this);
+                for (let [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
+
+                formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                formMessage.classList.add('success');
+                formMessage.style.display = 'block'; // Show message
+
+                // Optional: Clear the form after a short delay
+                setTimeout(() => {
+                    this.reset();
+                    formMessage.style.display = 'none';
+                    formMessage.classList.remove('success');
+                }, 4000);
+            });
         });
     </script>
 </body>
