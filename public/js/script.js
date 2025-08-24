@@ -1,3 +1,4 @@
+// Slider Initialization
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Hero Section Slider Logic ---
@@ -6,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextSlideButton = document.querySelector('.next-slide');
     const sliderDotsContainer = document.querySelector('.slider-dots');
 
+    // Initialize slider state
     let currentSlideIndex = 0;
+    let isSliding = false; // New state variable
     let autoSlideIntervalId = null; // Renamed for clarity
 
     // Function to display a specific slide
@@ -20,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentSlideIndex = index;
         }
 
+        // Update sliding state
         heroSlides.forEach((slide, i) => {
             slide.classList.remove('active'); // Remove 'active' from all slides
             if (i === currentSlideIndex) {
