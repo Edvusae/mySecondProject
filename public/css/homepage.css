@@ -284,3 +284,176 @@ nav ul li a.active {
         font-size: 1em;
     }
 }
+/* --- 4. Unique Value Proposition Section --- */
+/* ==================================================================== */
+/* 4. SOCIAL PROOF SECTION STYLES                                       */
+/* ==================================================================== */
+.social-proof-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.social-proof-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.social-preview-card {
+    flex: 0 0 45%; /* Limits card width */
+    max-width: 500px;
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.social-preview-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.social-preview-card h3 {
+    font-size: 1.6em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.social-preview-card h3 i {
+    color: #e67e22; /* Accent icon color */
+    margin-right: 8px;
+}
+
+/* Styling for image placeholder to resemble the attached screenshot */
+.social-preview-card [alt*="Image of"] { 
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #ecf0f1; /* Light gray box for preview */
+    color: #999;
+    line-height: 300px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 0.9em;
+    object-fit: cover; /* Important for actual images */
+}
+
+.preview-link {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.preview-link:hover {
+    border-bottom: 2px solid #3498db;
+}
+
+/* ==================================================================== */
+/* 5. FOOTER STYLES (Recruiter-Blowing CTA)                              */
+/* ==================================================================== */
+footer {
+    background-color: #2c3e50; /* Dark background from header */
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px; /* Increased padding */
+}
+
+.footer-content {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-cta-headline {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8f9fa; /* Slightly off-white for contrast */
+}
+
+.footer-cta-button {
+    /* Reusing the primary CTA button styles but adjusting the color */
+    background-color: #e67e22; /* High-impact accent color */
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+.footer-cta-button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* --- Social Proof Grid Changes --- */
+
+.social-proof-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Tighter gap for three columns */
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.social-preview-card {
+    /* Updated flex property to handle 3 columns nicely on large screens */
+    flex: 0 0 30%; 
+    min-width: 300px; /* Minimum size before wrapping */
+    max-width: 350px;
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ensure images fit nicely into the card */
+.social-preview-card img { 
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* New style for the icon-only cards (Facebook, LinkedIn) */
+.icon-container-large {
+    font-size: 6em;
+    color: #3498db;
+    margin: 30px 0;
+    height: 300px; /* Matches the image height for visual consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+}
+
+/* Responsive adjustment for small screens: makes cards full width */
+@media (max-width: 1000px) {
+    .social-preview-card {
+        flex: 0 0 45%; 
+    }
+}
+@media (max-width: 768px) {
+    .social-preview-card {
+        flex: 0 0 100%;
+    }
+}
