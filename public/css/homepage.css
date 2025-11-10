@@ -2,6 +2,68 @@
 /* HOME PAGE (index.html) STYLES                                        */
 /* ==================================================================== */
 
+/* ==================================================================== */
+/* 2. HEADER & NAVIGATION - (Clean and Fixed)                            */
+/* ==================================================================== */
+header {
+    background-color: #2c3e50; /* Deep charcoal/blue for a professional base */
+    color: white;
+    padding: 15px 0;
+    position: fixed; /* Ensures the header stays visible when scrolling */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Keeps it above all other content */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Strong, modern shadow */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800; /* Extra bold for impact */
+    letter-spacing: 1px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3498db; /* Bright blue highlight */
+    border-bottom: 2px solid #3498db; /* Active/hover underline indicator */
+}
+
+/* Ensure the main content starts below the fixed header */
+.hero-section {
+    padding-top: 150px; 
+    /* This rule was included in the previous CSS to fix the content flow. */
+}
+
 /* --- General Structure for Home Page --- */
 .hero-section, 
 .technical-stack-section, 
