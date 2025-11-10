@@ -399,6 +399,15 @@ footer {
     font-size: 0.9em;
     color: #bdc3c7;
 }
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+}
 
 /* --- Social Proof Grid Changes --- */
 
