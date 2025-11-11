@@ -3,7 +3,8 @@
 .projects-page-main {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 40px 80px; /* Space for fixed header */
+    /* Use padding to account for fixed header, ensuring content isn't hidden */
+    padding: 120px 40px 80px; 
 }
 
 /* --- Introduction Section --- */
@@ -11,37 +12,41 @@
 .projects-intro-section {
     text-align: center;
     padding: 40px 0 60px;
+    border-bottom: 2px solid #f4f4f4; /* Subtle separator */
+    margin-bottom: 40px;
 }
 
 .projects-title {
-    font-size: 3.2em;
+    font-size: 3.5em; /* Slightly larger, more impactful */
     font-weight: 800;
-    color: #2c3e50; /* Primary dark color */
-    margin-bottom: 10px;
+    color: #2c3e50; /* Primary Dark Blue (Header Color) */
+    margin-bottom: 15px;
 }
 
 .projects-subtitle {
-    font-size: 1.25em;
-    color: #7f8c8d; /* Subtle text */
-    max-width: 800px;
+    font-size: 1.3em;
+    color: #555; /* Neutral Dark Gray */
+    max-width: 900px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 /* --- Projects Grid and Cards --- */
 
 .projects-grid {
     display: grid;
+    /* Maintain the modern three-column look */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    gap: 30px; /* Reduced gap for a tighter, cleaner grid */
     padding: 20px 0;
 }
 
 .project-card {
-    background: #ffffff;
-    border-radius: 16px;
+    background: #fdfdfd; /* Off-white background for depth */
+    border-radius: 12px; /* Consistent rounded corners */
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid #ecf0f1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Stronger, professional shadow */
+    border: none; /* Removed light border, relying on shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -49,34 +54,35 @@
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15); /* Blue glow on hover */
+    transform: translateY(-8px); /* Deeper lift on hover */
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.25); /* Accent color glow on hover */
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Align icon and text properly */
     margin-bottom: 15px;
 }
 
 .project-card h3 {
-    font-size: 1.7em;
+    font-size: 1.6em;
     color: #34495e;
     font-weight: 700;
 }
 
 .project-icon {
-    font-size: 2.2em;
-    color: #3498db; /* Highlight color for icons */
-    opacity: 0.8;
+    font-size: 2.5em; /* Larger, more prominent icon */
+    color: #e67e22; /* Accent Orange/Gold */
+    opacity: 0.9;
+    min-width: 40px; /* Ensures text wrap works correctly */
 }
 
 .project-card p {
-    color: #555;
+    color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
-    flex-grow: 1; /* Ensures all cards stretch to the same height */
+    flex-grow: 1; 
 }
 
 /* --- Tech Tags --- */
@@ -90,32 +96,36 @@
 }
 
 .tech-tags span {
-    background-color: #ecf0f1;
+    background-color: #f4f4f4; /* Light, neutral tag background */
     color: #2c3e50;
-    padding: 6px 12px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
     font-size: 0.85em;
-    font-weight: 600;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* --- Project Links --- */
 
 .project-links {
     display: flex;
-    gap: 15px;
-    margin-top: auto; /* Pushes links to the bottom */
-    border-top: 1px solid #f4f6f7;
+    gap: 10px; /* Reduced gap */
+    margin-top: auto;
+    border-top: 1px solid #eee;
     padding-top: 20px;
 }
 
 .btn {
+    flex-grow: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95em;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -124,24 +134,26 @@
 }
 
 .github-link {
-    background-color: #34495e; /* Darker, primary button */
+    background-color: #2c3e50; /* Primary Dark Blue */
     color: white;
+    border: 2px solid #2c3e50;
 }
 
 .github-link:hover {
-    background-color: #2c3e50;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #34495e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .live-link {
-    background-color: transparent;
-    border: 2px solid #3498db;
-    color: #3498db;
+    background-color: white;
+    border: 2px solid #e67e22; /* Accent Orange/Gold border */
+    color: #e67e22;
 }
 
 .live-link:hover {
-    background-color: #3498db;
+    background-color: #e67e22;
     color: white;
+    border-color: #e67e22;
 }
 
 /* --- Projects CTA Footer --- */
@@ -152,16 +164,16 @@
 }
 
 .projects-cta-footer p {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 300;
     color: #555;
     margin-bottom: 20px;
 }
 
 .primary-cta-button {
-    background-color: #e67e22; /* Your portfolio accent color */
+    background-color: #e67e22; /* Accent Orange/Gold */
     color: white;
-    padding: 15px 35px;
+    padding: 15px 40px;
     font-size: 1.1em;
     border-radius: 10px;
 }
@@ -176,7 +188,8 @@
 
 @media (max-width: 1200px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        /* Adjusted minmax for better use of mid-size screens */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
 }
 
@@ -194,9 +207,11 @@
         padding: 25px;
     }
     .project-links {
-        flex-direction: column;
+        /* Keep links side-by-side for better mobile experience if possible */
+        flex-direction: row; 
+        gap: 10px;
     }
     .btn {
-        width: 100%;
+        flex-grow: 1; /* Each button takes up half the width */
     }
 }
