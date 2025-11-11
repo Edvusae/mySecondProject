@@ -1,33 +1,92 @@
-/* --- Projects Page Main Styles --- */
+/* --- Header and Navigation Bar --- */
 
 header {
-    position: fixed;
+    background-color: #2c3e50; /* Primary Dark Blue color from your header image */
+    color: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Makes the header sticky */
     top: 0;
     width: 100%;
-    background-color: #2c3e50; /* Dark Blue */
-    color: white;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.logo {
-    font-size: 1.8em;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-ul.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+.logo {
+    /* Style matching the screenshot: strong, serif look */
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 1.8em;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    /* REFACTOR: Added subtle interactive polish */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #e67e22; /* Matches the accent color on hover */
+}
+
+
+/* --- Navigation Links Container --- */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Crucial for horizontal layout */
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.0em;
+    padding-bottom: 8px; /* Added padding for the accent line */
+    position: relative;
+    transition: color 0.3s ease;
+    display: block; /* Ensures links take up space for padding */
+}
+
+/* Accent Line for Active/Hover State */
+nav ul li a:hover {
+    color: #e67e22; /* Accent Orange/Gold on hover */
+}
+
+/* Decorative bottom line (underline effect) */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* Thicker line for impact */
+    background-color: #e67e22; /* Accent Orange/Gold line */
+    border-radius: 1.5px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Active Page Link Style (The most important part to fix the "boring" state) */
+nav ul li a.active {
+    color: #e67e22; /* Active link text color */
+    font-weight: 700; /* Makes the active link stand out */
+}
+
+nav ul li a.active::after {
+    width: 100%; /* Active link always shows the line */
+    background-color: #e67e22;
+}
 .projects-page-main {
     max-width: 1400px;
     margin: 0 auto;
