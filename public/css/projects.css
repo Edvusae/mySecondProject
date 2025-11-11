@@ -1,5 +1,33 @@
 /* --- Projects Page Main Styles --- */
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50; /* Dark Blue */
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
 .projects-page-main {
     max-width: 1400px;
     margin: 0 auto;
@@ -206,12 +234,64 @@
     .project-card {
         padding: 25px;
     }
+    /* REFACTOR: Ensuring project links look great on mobile */
     .project-links {
-        /* Keep links side-by-side for better mobile experience if possible */
         flex-direction: row; 
         gap: 10px;
     }
     .btn {
-        flex-grow: 1; /* Each button takes up half the width */
+        flex-grow: 1; /* Each button takes up half the width, giving a balanced look */
     }
+}
+/* ==================================================================== */
+/* 5. FOOTER STYLES (Recruiter-Blowing CTA)                              */
+/* ==================================================================== */
+footer {
+    background-color: #2c3e50; /* Dark background from header */
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px; /* Increased padding */
+}
+
+footer {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+footer-content h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8f9fa; /* Slightly off-white for contrast */
+}
+footer-cta-button {
+    /* Reusing the primary CTA button styles but adjusting the color */
+    background-color: #e67e22; /* High-impact accent color */
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+footer-cta-button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+}
+
+
+/* ==================================================================== */
+/* 3. DEVELOPER ILLUSTRATION SECTION                                    */
+/* ==================================================================== */  
+.developer-illustration-section {
+    background-color: #f9f9f9; /* Light background to differentiate section */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.developer-illustration-section h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
