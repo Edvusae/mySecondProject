@@ -1,7 +1,7 @@
 /* --- Header and Navigation Bar --- */
 
 header {
-    background-color: #2c3e50; /* Primary Dark Blue color from your header image */
+    background-color: #2c3e50; 
     color: white;
     padding: 15px 40px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -25,13 +25,12 @@ nav {
     font-size: 1.8em;
     font-weight: 900;
     letter-spacing: 0.5px;
-    /* REFACTOR: Added subtle interactive polish */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: #e67e22; /* Matches the accent color on hover */
+    color: #e67e22; /* Accent Orange/Gold on hover */
 }
 
 
