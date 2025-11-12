@@ -3,136 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - [Your Name]</title>
-    <link rel="stylesheet" href="/public/css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Edwin - Let's Talk</title>
+    <link rel="stylesheet" href="/public/css/style.css"> 
+    <link rel="stylesheet" href="/public/css/contact.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav>
             <div class="logo">My Portfolio</div>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#gallery">Gallery</a></li>
-                <li><a href="contact.html" id="contactLink">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="contact-page-main">
-        <section class="contact-hero-section">
-            <div class="hero-overlay">
-                <h1>Let's Create Something Amazing.</h1>
-                <p>I'd love to hear from you! Whether you have a project idea, a question, or just want to say hello, feel free to reach out.</p>
-            </div>
-        </section>
-
-        <section class="contact-details-section">
-            <h2 class="section-title">Reach Out Directly</h2>
-                <div class="info-card">
-                    <i class="fas fa-phone-alt icon-large"></i>
-                    <h3>Call Me</h3>
-                    <p>+263 77 340 3721</p> </div>
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt icon-large"></i>
-                    <h3>Based In</h3>
-                    <p>Harare, Zimbabwe</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="social-contact-section">
-            <h2>Find Me Online</h2>
-            <div class="social-links">
-                <a href="#" target="_blank" class="social-icon github"><i class="fab fa-github"></i><span>GitHub</span></a>
-                <a href="#" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
-                <a href="#" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                <a href="#" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
-            </div>
-            
-            <p class="email-prompt">
-                ...or send me a direct email! <a href="mailto:your.email@example.com">your.email@example.com</a>
-            </p>
-            
+        <div class="contact-container">
+            <section class="contact-hero">
+                <h1 class="accent-text">Get In Touch</h1>
+                <h2>Let's Architect Your Next Digital Solution.</h2>
+                <p>Whether you have a project idea, a job inquiry, or just want to say hello, I'm ready to connect. Fill out the form below or use my direct contact details.</p>
             </section>
 
-        <section class="contact-form-section">
-            <h2 class="section-title">Send Me a Message</h2>
-            <div class="form-container-card">
-                <form class="contact-form" id="contactForm">
+            <section class="contact-details-and-form">
+                
+                <div class="contact-info">
+                    <h3>Direct Contact</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tsembeganoedwin@gmail.com">tsembeganoedwin@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+263773403721">(+263) 773 403 721</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Harare, Zimbabwe</span>
+                    </div>
+
+                    <h3>Connect Online</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Edvusae" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        <input type="text" id="subject" name="subject" required placeholder="Project Inquiry or Hello">
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or question..."></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
-                    <div id="formMessage" class="form-message"></div>
+                    <button type="submit" class="cta-button">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <p id="formStatus" class="form-status-message"></p>
                 </form>
-            </div>
-        </section>
-        
-        <section class="contact-map-section">
-            <h2 class="section-title">My Location</h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118815.11890333792!2d30.957584149999998!3d-17.8286955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a3845b7f1411%3A0xc3f6050b1f7e02d!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2szw!4v1722420000000!5m2!1sen!2szw"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <div class="footer-content">
+            <p class="footer-cta-headline">
+                I don't just build code; I architect digital outcomes.
+            </p>
+            <a href="contact.html" class="cta-button footer-cta-button">
+                Let's Architect Your Next Project <i class="fas fa-handshake"></i>
+            </a>
+        </div>
+        <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
     </footer>
-
-    <script src="/public/js/script.js"></script> <script>
-        // Specific script for the contact page
-        document.addEventListener('DOMContentLoaded', () => {
-            // Highlight active navigation link
-            const contactLink = document.getElementById('contactLink');
-            if (contactLink) {
-                contactLink.classList.add('active');
-            }
-
-            // Simple form submission handler (client-side only)
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
-
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
-
-                // In a real application, you would send this data to a server
-                // using fetch() or XMLHttpRequest.
-                console.log('Form Submitted!');
-                const formData = new FormData(this);
-                for (let [key, value] of formData.entries()) {
-                    console.log(`${key}: ${value}`);
-                }
-
-                formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                formMessage.classList.add('success');
-                formMessage.style.display = 'block'; // Show message
-
-                // Optional: Clear the form after a short delay
-                setTimeout(() => {
-                    this.reset();
-                    formMessage.style.display = 'none';
-                    formMessage.classList.remove('success');
-                }, 4000);
-            });
+    
+    <script>
+        // Simple form handling (as the backend email sending is not implemented here)
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formStatus = document.getElementById('formStatus');
+            formStatus.textContent = 'Thank you for your message, Edwin will get back to you shortly!';
+            formStatus.classList.add('success');
+            
+            // Optional: Clear the form after a successful "submission"
+            // setTimeout(() => {
+            //     this.reset();
+            //     formStatus.textContent = '';
+            //     formStatus.classList.remove('success');
+            // }, 4000);
         });
     </script>
 </body>
