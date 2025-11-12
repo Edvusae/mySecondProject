@@ -1,548 +1,173 @@
-/* General Body & Header Styles (Ensure these are consistent from your main styles) */
+/* ------------------------------------------------------------------- */
+/* --- GLOBAL STYLES (To be placed in style.css) --- */
+/* ------------------------------------------------------------------- */
+
+/* Base Font Setup */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 body {
+    font-family: 'Inter', sans-serif; /* Ensuring consistent font across all pages */
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Recommended modern font */
-    line-height: 1.6;
+    padding: 0;
+    background-color: #f8f8f8;
     color: #333;
-    background-color: #f4f7f6; /* Light background for overall site */
 }
 
-/* Header/Navigation - example (copy from your index.html's CSS if not already global) */
+/* --- Header and Navigation Bar --- */
+
 header {
-    background-color: #222;
+    background-color: #2c3e50; /* Primary Dark Blue color from your header image */
     color: white;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Makes the header sticky */
     top: 0;
+    width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .logo {
+    /* Style matching the screenshot: strong, serif look */
+    font-family: Georgia, 'Times New Roman', Times, serif; 
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
+.logo:hover {
+    color: #e67e22; /* Matches the accent color on hover */
+}
+
+
+/* --- Navigation Links Container --- */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 25px;
+    display: flex; /* Crucial for horizontal layout */
+    gap: 30px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active { /* Added active state for navigation */
-    color: #007bff;
-}
-
-/* --- Specific Contact Page Styles --- */
-
-.contact-page-main {
-    padding-top: 80px; /* Adjust based on header height to prevent overlap */
-    margin: 0 auto;
-    max-width: 1200px;
-    padding-bottom: 60px; /* Space above footer */
-}
-
-.section-title {
-    font-size: 2.8em;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.0em;
+    padding-bottom: 8px; /* Added padding for the accent line */
     position: relative;
-    padding-top: 40px; /* Space from previous section */
+    transition: color 0.3s ease;
+    display: block; /* Ensures links take up space for padding */
 }
 
-.section-title::after {
+/* Accent Line for Active/Hover State */
+nav ul li a:hover {
+    color: #e67e22; /* Accent Orange/Gold on hover */
+}
+
+/* Decorative bottom line (underline effect) */
+nav ul li a::after {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 80px;
-    height: 4px;
-    background-color: #007bff;
-    border-radius: 2px;
-}
-
-/* Contact Hero Section */
-.contact-hero-section {
-    position: relative;
-    height: 400px; /* Fixed height for hero */
-    background: url('https://placehold.co/1920x400/34495e/ecf0f1?text=Connect+With+Me') no-repeat center center/cover; /* Replace with your own hero image */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 60px;
-    border-radius: 10px; /* Rounded corners for the section */
-    overflow: hidden; /* Important for border-radius on child elements */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
+    width: 0;
+    height: 3px; /* Thicker line for impact */
+    background-color: #e67e22; /* Accent Orange/Gold line */
+    border-radius: 1.5px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: white;
 }
 
-.contact-hero-section h1 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+/* Active Page Link Style (The most important part to fix the "boring" state) */
+nav ul li a.active {
+    color: #e67e22; /* Active link text color */
+    font-weight: 700; /* Makes the active link stand out */
 }
 
-.contact-hero-section p {
-    font-size: 1.3em;
-    max-width: 700px;
-    line-height: 1.5;
+nav ul li a.active::after {
+    width: 100%; /* Active link always shows the line */
+    background-color: #e67e22;
 }
 
-/* Contact Details Section */
-.contact-details-section {
-    padding: 0 20px 60px; /* Padding for content area */
-}
 
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-    justify-content: center;
-}
+/* --- Utility Classes / Shared Elements (keeping for completeness) --- */
 
-.info-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.info-card .icon-large {
-    font-size: 3.5em; /* Larger icons */
-    color: #007bff; /* Primary color for icons */
-    margin-bottom: 20px;
-}
-
-.info-card h3 {
-    font-size: 1.5em;
-    color: #34495e;
-    margin-bottom: 10px;
-}
-
-.info-card p {
-    font-size: 1.1em;
-    color: #555;
-    margin: 0;
-}
-
-.info-card p a {
-    color: #007bff;
+.cta-button {
     text-decoration: none;
-    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-.info-card p a:hover {
-    text-decoration: underline;
-    color: #0056b3;
+/* --- Footer Styles (Basic) --- */
+
+footer {
+    background-color: #34495e; 
+    color: #ecf0f1;
+    text-align: center;
+    /* REFACTOR: Increased padding for more vertical space */
+    padding: 60px 20px 40px; 
+    margin-top: 60px;
 }
 
-/* Contact Form Section */
-.contact-form-section {
-    padding: 0 20px 60px;
-    background-color: #fcfcfc; /* Slightly different background for the form section */
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto 20px;
 }
 
-.form-container-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.contact-form .form-group {
+.footer-cta-headline {
+    font-size: 1.2em;
+    font-weight: 300;
     margin-bottom: 25px;
 }
 
-.contact-form label {
-    display: block;
-    font-size: 1.1em;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Include padding in width */
-}
-
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-    outline: none;
-}
-
-.contact-form textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 120px;
-}
-
-.submit-button {
-    display: inline-block;
-    background-color: #007bff;
+.footer-cta-button {
+    background-color: #e67e22;
     color: white;
-    padding: 15px 35px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.submit-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.footer-cta-button:hover {
+    background-color: #d35400;
 }
 
-.submit-button i {
-    margin-left: 10px;
-}
-
-.form-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    display: none; /* Hidden by default */
-    text-align: center;
-}
-
-.form-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-/* Contact Map Section */
-.contact-map-section {
-    padding: 0 20px 60px;
-}
-
-.map-container {
-    border-radius: 12px;
-    overflow: hidden; /* Ensures the iframe corners are rounded */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    height: 450px; /* Fixed height for the map */
-    margin-top: 30px;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* Footer (example - copy from your main site's CSS if not already global) */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.copyright {
     font-size: 0.9em;
+    color: #95a5a6;
+    margin-top: 20px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .contact-hero-section h1 {
-        font-size: 2.8em;
-    }
-
-    .contact-hero-section p {
-        font-size: 1.1em;
-    }
-
-    .info-card {
-        padding: 25px;
-    }
-
-    .info-card .icon-large {
-        font-size: 3em;
-    }
-}
-
+/* --- Media Query for Mobile Responsiveness --- */
 @media (max-width: 768px) {
-    .contact-hero-section {
-        height: 350px;
-        margin-bottom: 40px;
+    header {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .logo {
+        font-size: 1.6em;
     }
 
-    .contact-hero-section h1 {
-        font-size: 2.2em;
+    /* Adjust main content padding for mobile fixed header */
+    main {
+        padding-top: 80px;
     }
-
-    .contact-hero-section p {
-        font-size: 1em;
-    }
-
-    .section-title {
-        font-size: 2.2em;
-        margin-bottom: 40px;
-    }
-
-    .contact-info-grid {
-        grid-template-columns: 1fr; /* Stack cards vertically */
-        gap: 20px;
-    }
-
-    .form-container-card {
-        padding: 30px;
-    }
-
-    .submit-button {
-        width: 100%; /* Full width button on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-page-main {
-        padding-top: 60px; /* Adjust for header */
-    }
-
-    .contact-hero-section {
-        height: 300px;
-    }
-
-    .contact-hero-section h1 {
-        font-size: 1.8em;
-    }
-
-    .contact-hero-section p {
-        font-size: 0.9em;
-    }
-
-    .section-title {
-        font-size: 1.8em;
-        margin-bottom: 30px;
-    }
-
-    .info-card {
-        padding: 20px;
-    }
-
-    .info-card .icon-large {
-        font-size: 2.5em;
-    }
-
-    .form-container-card {
-        padding: 20px;
-    }
-
-    .contact-form label {
-        font-size: 1em;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 12px;
-        font-size: 0.9em;
-    }
-
-    .submit-button {
-        font-size: 1.1em;
-        padding: 12px 25px;
-    }
-}
-
-/* --- 1. Social Contact Links (For contact.html) --- */
-.social-contact-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-.social-icon {
-    font-size: 24px; /* Icon size */
-    color: #333; /* Default icon color */
-    transition: transform 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social-icon span {
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.social-icon:hover {
-    transform: translateY(-5px);
-}
-
-.github:hover { color: #171515; }
-.linkedin:hover { color: #0077B5; }
-.instagram:hover { color: #E4405F; }
-.facebook:hover { color: #1877F2; }
-
-
-/* --- 2. Projects Grid (For projects.html) --- */
-.projects-grid {
-    display: grid;
-    /* Sets up a responsive grid: 
-       2 columns on large screens, 1 on small */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 40px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background-color: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.project-card h3 {
-    margin-top: 0;
-    color: #007bff; /* Highlight color */
-}
-
-.tech-tags span {
-    display: inline-block;
-    background-color: #eee;
-    color: #666;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-
-.project-links .btn {
-    display: inline-block;
-    padding: 8px 15px;
-    margin-right: 10px;
-    margin-top: 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.github-link {
-    background-color: #333;
-    color: white;
-}
-
-.live-link {
-    background-color: #007bff;
-    color: white;
-}
-
-
-/* --- 3. Skills Blend Section (For index.html) --- */
-.skills-blend-section {
-    padding: 40px 0;
-    margin-top: 40px;
-    border-top: 1px solid #eee;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.skill-category {
-    flex: 1; /* Takes equal space */
-    min-width: 250px; /* Ensures they don't get too narrow */
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-left: 5px solid #007bff; /* Visual emphasis */
-    border-radius: 4px;
-}
-
-.skill-category h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.skill-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skill-category ul li {
-    padding: 5px 0;
-    font-size: 15px;
 }
