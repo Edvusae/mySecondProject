@@ -1,0 +1,179 @@
+/* --- About Page Structure --- */
+
+.about-page-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Padding accounts for the fixed header */
+    padding: 120px 40px 80px; 
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Content on left, illustration placeholder on right */
+    gap: 50px;
+}
+
+/* --- Hero Section --- */
+
+.about-me-hero {
+    grid-column: 1 / 3; /* Spans both columns for the main title */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.about-me-hero h1 {
+    font-size: 3.8em;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.about-me-hero h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.accent-text {
+    color: #e67e22; /* Accent Orange/Gold */
+}
+
+/* --- Main Text Section --- */
+
+.about-me-text-section {
+    grid-column: 1 / 2; /* Confines text to the left column */
+    max-width: 850px;
+}
+
+.summary-paragraph {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.closing-paragraph {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 40px;
+}
+
+/* --- Unique Value Section --- */
+
+.unique-value-section {
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.unique-value-section h3 {
+    font-size: 1.8em;
+    color: #2c3e50; /* Primary Dark Blue */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.value-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.value-point {
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    border-left: 4px solid #e67e22; /* Accent color highlight */
+}
+
+.value-point h4 {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-top: 0;
+}
+
+.value-point i {
+    color: #e67e22;
+    margin-right: 10px;
+}
+
+.value-point p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* --- CTA Button --- */
+
+.cta-button-secondary {
+    display: block;
+    width: fit-content;
+    background-color: #e67e22;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+.cta-button-secondary i {
+    margin-left: 10px;
+}
+
+/* --- Illustration Placeholder --- */
+
+.developer-illustration {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.developer-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 1200px) {
+    .about-page-main {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+    .about-me-text-section, .developer-illustration, .about-me-hero {
+        grid-column: 1 / 2;
+    }
+    .developer-illustration {
+        order: -1; /* Move illustration above text on small screens */
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-main {
+        padding: 100px 20px 60px;
+    }
+    .about-me-hero h1 {
+        font-size: 2.8em;
+    }
+    .about-me-hero h2 {
+        font-size: 1.4em;
+    }
+    .summary-paragraph {
+        font-size: 1.1em;
+    }
+    .cta-button-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
