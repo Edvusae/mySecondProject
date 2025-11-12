@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Edwin - Front-End Developer</title>
-    <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/style.css"> 
+    <link rel="stylesheet" href="/public/css/about.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="main-header">
@@ -22,13 +22,13 @@
 
     <main class="about-page-main">
         <section class="about-me-hero">
-            <h1 class="blue-text">👋 Hello, I'm Edwin Tsembegano.</h1>
+            <h1 class="accent-text">👋 Hello, I'm Edwin Tsembegano.</h1>
             
             <h2>The Front-End Developer Blending Architecture & Digital Strategy</h2>
         </section>
 
         <section class="about-me-text-section">
-            <p>
+            <p class="summary-paragraph">
                 I am a **certified Front-End Developer** specializing in **React.js** and **JavaScript (ES6+)**, dedicated to crafting interactive, functional, and user-centric digital solutions. I thrive on problem-solving and turning complex concepts into intuitive web applications.
             </p>
 
@@ -50,22 +50,28 @@
                 </div>
             </div>
 
-            <p>
+            <p class="closing-paragraph">
                 I am eager to contribute my technical skills, creative foresight, and collaborative spirit to a forward-thinking web development team.
             </p>
             
-            <a href="projects.html" class="btn cta-button-secondary">View My Featured React & JavaScript Projects</a>
+            <a href="projects.html" class="btn cta-button-secondary">View My Featured React & JavaScript Projects <i class="fas fa-arrow-right"></i></a>
         </section>
         
         <div class="developer-illustration">
-            
+            <img src="/public/img/developer-working.svg" alt="Developer Illustration" class="developer-img">
         </div> 
     </main>
     
     <footer>
-        <p>&copy; 2025 Edwin Tsembegano Portfolio</p>
+        <div class="footer-content">
+            <p class="footer-cta-headline">
+                I don't just build code; I architect digital outcomes.
+            </p>
+            <a href="contact.html" class="cta-button footer-cta-button">
+                Let's Architect Your Next Project <i class="fas fa-handshake"></i>
+            </a>
+        </div>
+        <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
     </footer>
-
-    <script src="js/common.js"></script>
 </body>
 </html>
