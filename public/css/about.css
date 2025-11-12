@@ -45,9 +45,7 @@
 
 .summary-paragraph {
     font-size: 1.2em;
-    /* Increased line height for better readability */
     line-height: 1.8;
-    /* Added more margin below summary */
     margin-bottom: 60px; 
     text-align: left; 
 }
@@ -56,7 +54,6 @@
     font-size: 1.1em;
     font-style: italic;
     color: #7f8c8d;
-    /* Increased margin above closing paragraph */
     margin-top: 60px; 
     text-align: left;
 }
@@ -64,18 +61,19 @@
 /* --- Unique Value Section --- */
 
 .unique-value-section {
-    background-color: #fdfdfd;
-    /* Increased padding inside the box */
-    padding: 40px; 
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
+    /* Removed padding to let grid items handle spacing */
+    padding: 0;
+    /* Removing background and shadow from the container, relying on grid items */
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
 }
 
 .unique-value-section h3 {
     font-size: 1.8em;
-    color: #2c3e50; /* Primary Dark Blue */
-    /* Increased margin below title */
+    color: #2c3e50;
+    /* Added top padding to separate it from the summary text */
+    padding-top: 20px;
     margin-bottom: 40px; 
     text-align: center;
 }
@@ -88,28 +86,40 @@
 }
 
 .value-point {
-    padding: 20px;
-    border-radius: 8px;
+    /* REFACTOR: Clean, white card style for each point */
+    padding: 30px; 
+    border-radius: 12px;
     background: #ffffff;
-    border-left: 4px solid #e67e22; /* Accent color highlight */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow on the card */
+    border-left: 5px solid #e67e22; /* Thicker Accent color highlight on the left */
+    /* Removed light border from container, relying on shadow */
+    transition: transform 0.3s ease;
+}
+
+.value-point:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .value-point h4 {
-    font-size: 1.3em;
+    font-size: 1.4em; /* Slightly larger title */
     color: #34495e;
     margin-top: 0;
-    /* Added margin below subtitle */
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
+    display: flex; /* For inline icon and text alignment */
+    align-items: center;
 }
 
 .value-point i {
     color: #e67e22;
-    margin-right: 10px;
+    font-size: 1.1em;
+    margin-right: 12px;
 }
 
 .value-point p {
     color: #666;
     line-height: 1.6;
+    margin: 0;
 }
 
 /* --- CTA Button --- */
@@ -146,23 +156,19 @@
     .about-content-wrapper {
         max-width: 100%;
     }
-    .about-me-hero h1 {
-        font-size: 2.8em;
-    }
-    .about-me-hero h2 {
-        font-size: 1.4em;
-    }
-    .summary-paragraph {
-        font-size: 1.1em;
-        line-height: 1.7;
-        margin-bottom: 40px;
-    }
     .value-points-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .value-point {
+        padding: 25px;
+    }
+    .value-point h4 {
+        font-size: 1.3em;
     }
     .cta-button-secondary {
         width: 100%;
         margin: 40px 0 0 0;
     }
 }
+/* --- End of About Page Styles --- */
