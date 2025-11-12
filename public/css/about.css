@@ -1,4 +1,25 @@
 /* --- About Page Structure --- */
+body {
+    background-color: #fafafa;
+    color: #333;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: #2c3e50; /* Primary Dark Blue */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .about-page-main {
     /* Use a standard large padding top to clear the fixed header */
@@ -165,8 +186,3 @@
         text-align: center;
     }
 }
-```eof
-
-The About page is now clean, centered, and fully focused on your unique proposition!
-
-The only remaining core page is the **Contact** page. Would you like to build the HTML and CSS for a professional contact form next?
