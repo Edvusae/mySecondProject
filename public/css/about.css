@@ -1,19 +1,21 @@
 /* --- About Page Structure --- */
 
 .about-page-main {
-    max-width: 1400px;
-    margin: 0 auto;
-    /* Padding accounts for the fixed header */
+    /* Use a standard large padding top to clear the fixed header */
     padding: 120px 40px 80px; 
-    display: grid;
-    grid-template-columns: 3fr 1fr; /* Content on left, illustration placeholder on right */
-    gap: 50px;
+    /* Removed grid layout to enforce single column */
+}
+
+.about-content-wrapper {
+    max-width: 900px; /* Set max readable width */
+    margin: 0 auto; /* Crucial: Centers the content container */
 }
 
 /* --- Hero Section --- */
 
 .about-me-hero {
-    grid-column: 1 / 3; /* Spans both columns for the main title */
+    /* Centering text */
+    text-align: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px solid #f4f4f4;
@@ -39,14 +41,16 @@
 /* --- Main Text Section --- */
 
 .about-me-text-section {
-    grid-column: 1 / 2; /* Confines text to the left column */
-    max-width: 850px;
+    /* Content is now centered inside the wrapper */
+    padding: 0 20px;
 }
 
 .summary-paragraph {
     font-size: 1.2em;
     line-height: 1.7;
     margin-bottom: 40px;
+    /* Optional: Ensure text alignment is not centered */
+    text-align: left; 
 }
 
 .closing-paragraph {
@@ -54,6 +58,7 @@
     font-style: italic;
     color: #7f8c8d;
     margin-top: 40px;
+    text-align: left;
 }
 
 /* --- Unique Value Section --- */
@@ -75,7 +80,8 @@
 
 .value-points-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Maintain the modern three-column structure inside the content wrapper */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
@@ -106,15 +112,17 @@
 /* --- CTA Button --- */
 
 .cta-button-secondary {
+    /* Align button to the center of the content block */
     display: block;
     width: fit-content;
+    margin: 50px auto 0 auto;
+    
     background-color: #e67e22;
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -127,41 +135,16 @@
     margin-left: 10px;
 }
 
-/* --- Illustration Placeholder --- */
-
-.developer-illustration {
-    grid-column: 2 / 3;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
-}
-
-.developer-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    opacity: 0.9;
-}
+/* Removed developer-illustration styles */
 
 /* --- Media Queries for Responsiveness --- */
-
-@media (max-width: 1200px) {
-    .about-page-main {
-        grid-template-columns: 1fr; /* Stack columns */
-    }
-    .about-me-text-section, .developer-illustration, .about-me-hero {
-        grid-column: 1 / 2;
-    }
-    .developer-illustration {
-        order: -1; /* Move illustration above text on small screens */
-        padding-bottom: 40px;
-    }
-}
 
 @media (max-width: 768px) {
     .about-page-main {
         padding: 100px 20px 60px;
+    }
+    .about-content-wrapper {
+        max-width: 100%;
     }
     .about-me-hero h1 {
         font-size: 2.8em;
@@ -172,8 +155,18 @@
     .summary-paragraph {
         font-size: 1.1em;
     }
+    .value-points-grid {
+        /* Single column on mobile */
+        grid-template-columns: 1fr;
+    }
     .cta-button-secondary {
         width: 100%;
+        margin: 50px 0 0 0; /* Full width, no margin auto */
         text-align: center;
     }
 }
+```eof
+
+The About page is now clean, centered, and fully focused on your unique proposition!
+
+The only remaining core page is the **Contact** page. Would you like to build the HTML and CSS for a professional contact form next?
