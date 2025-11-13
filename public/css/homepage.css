@@ -46,18 +46,28 @@
     margin-bottom: 30px;
 }
 
+/* --- UPDATED HERO IMAGE PLACEHOLDER STYLES --- */
 .hero-image-placeholder {
     flex: 1; /* Takes up less space for image */
     background-color: #ecf0f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0; /* Removed padding to give image max space */
     border-radius: 12px;
-    min-height: 200px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    
+    min-height: 350px; /* Increased min-height for better visual balance */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Crucial: Hides any part of the image that might stick out */
 }
+
+/* --- NEW RULE FOR THE IMAGE INSIDE THE PLACEHOLDER --- */
+.hero-image-placeholder img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Ensures the image covers the area without being squashed, cropping excess if necessary */
+    border-radius: 12px; /* Match the container's rounded corners */
+}
+/* ----------------------------------------------------- */
 
 .primary-cta {
     background-color: #e67e22; /* Accent Orange/Gold */
