@@ -1,468 +1,303 @@
-/* ==================================================================== */
-/* HOME PAGE (index.html) STYLES                                        */
-/* ==================================================================== */
+/* ------------------------------------------------------------------- */
+/* --- HOME PAGE SPECIFIC STYLES (Focusing only on main content) --- */
+/* ------------------------------------------------------------------- */
 
-/* ==================================================================== */
-/* 2. HEADER & NAVIGATION - (Clean and Fixed)                            */
-/* ==================================================================== */
-header {
-    background-color: #2c3e50; /* Deep charcoal/blue for a professional base */
-    color: white;
-    padding: 15px 0;
-    position: fixed; /* Ensures the header stays visible when scrolling */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Keeps it above all other content */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Strong, modern shadow */
+.home-page-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 90px 40px 60px; /* Adjusted top padding to account for fixed header */
 }
 
-nav {
+/* --- Hero Section --- */
+
+.hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 800; /* Extra bold for impact */
-    letter-spacing: 1px;
-    color: white;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.05em;
-    font-weight: 500;
-    padding: 8px 0;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #3498db; /* Bright blue highlight */
-    border-bottom: 2px solid #3498db; /* Active/hover underline indicator */
-}
-
-/* Ensure the main content starts below the fixed header */
-.hero-section {
-    padding-top: 150px; 
-    /* This rule was included in the previous CSS to fix the content flow. */
-}
-
-/* --- General Structure for Home Page --- */
-.hero-section, 
-.technical-stack-section, 
-.highlight-experience {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    color: #2c3e50;
-    position: relative;
-    display: inline-block;
-    font-weight: 700;
-}
-.section-title::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
-    background-color: #3498db;
-    border-radius: 2px;
-}
-
-/* --- 1. Hero Section Styling (High Impact) --- */
-.hero-section {
-    padding-top: 150px; /* Space for fixed header */
-    padding-bottom: 120px;
-    background: linear-gradient(145deg, #eef1f4, #f8f9fa); /* Subtle gradient background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 80px 0;
+    gap: 50px;
+    border-bottom: 2px solid #f4f4f4;
 }
 
 .hero-content-professional {
-    max-width: 850px;
+    flex: 2; /* Takes up more space for text */
 }
 
 .greeting {
-    font-size: 1.5em;
-    color: #e67e22; /* Accent color */
-    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #e67e22; /* Accent Color */
     margin-bottom: 10px;
 }
 
 .main-headline {
-    font-size: 4em; /* Very large and impactful */
-    color: #34495e;
-    font-weight: 900; /* Extra bold */
-    margin-bottom: 25px;
+    font-size: 3.2em;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #2c3e50; /* Dark Primary Color */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .pitch-summary {
-    font-size: 1.3em;
-    line-height: 1.6;
+    font-size: 1.1em;
     color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-image-placeholder {
+    flex: 1; /* Takes up less space for image */
+    background-color: #ecf0f1;
+    min-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.primary-cta {
+    background-color: #e67e22; /* Accent Orange/Gold */
+    color: white;
+}
+
+.primary-cta:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* --- Shared Section Titles --- */
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #34495e;
+    margin-top: 60px;
     margin-bottom: 40px;
 }
-.pitch-summary strong {
-    color: #3498db;
-    font-weight: 700;
-}
 
-.cta-button {
-    display: inline-block;
-    background-color: #3498db; 
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-}
+/* --- Technical Stack Section --- */
 
-.cta-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-}
-.cta-button i {
-    margin-left: 10px;
-}
-
-
-/* --- 2. Technical Stack Section --- */
 .technical-stack-section {
-    background-color: #ffffff; 
+    padding: 50px 0;
 }
 
 .stack-categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    text-align: left;
 }
 
 .category-card {
-    background-color: #fdfdff;
-    border: 1px solid #eee;
+    background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
 }
+
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .category-card h3 {
-    font-size: 1.4em;
-    color: #34495e;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #eef1f4;
-    padding-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .category-card h3 i {
-    color: #e67e22;
+    color: #e67e22; /* Accent Color for Icon */
     margin-right: 10px;
 }
 
 .category-card ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.category-card li {
-    font-size: 1.1em;
-    padding: 8px 0;
+.category-card ul li {
+    font-size: 1em;
     color: #555;
-    border-bottom: 1px dashed #eee;
-}
-.category-card li:last-child {
-    border-bottom: none;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f4f4f4;
 }
 
+/* --- Highlight Experience Section --- */
 
-/* --- 3. Highlight Experience Section (The Unique Blend) --- */
 .highlight-experience {
-    background-color: #eef1f4;
-    padding-bottom: 100px;
+    text-align: center;
+    padding: 50px 0 80px;
+    border-top: 2px solid #f4f4f4;
 }
 
 .experience-card {
     display: inline-block;
-    width: 45%; 
-    max-width: 400px;
-    margin: 0 20px 40px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    max-width: 450px;
     vertical-align: top;
+    margin: 0 2%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
 }
 
-.icon-container {
-    font-size: 3em;
-    color: #3498db;
-    margin-bottom: 15px;
+.experience-card .icon-container {
+    background-color: #e67e22; /* Accent background */
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 1.8em;
+    margin: 0 auto 20px;
 }
 
 .experience-card h3 {
-    font-size: 1.5em;
-    color: #34495e;
+    color: #2c3e50;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .experience-card p {
-    font-size: 1.05em;
     color: #666;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 
 .secondary-cta {
-    background-color: #555; 
-    box-shadow: none;
-    margin-top: 30px;
+    background-color: #34495e; /* Secondary dark color */
+    color: white;
+    margin-top: 20px;
 }
+
 .secondary-cta:hover {
-    background-color: #333;
+    background-color: #2c3e50;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 73, 94, 0.4);
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 900px) {
-    .main-headline {
-        font-size: 3em;
-    }
-    .pitch-summary {
-        font-size: 1.1em;
-    }
-    .experience-card {
-        width: 100%;
-        margin: 20px 0;
-    }
-}
+/* --- Social Proof Section --- */
 
-@media (max-width: 600px) {
-    .main-headline {
-        font-size: 2.2em;
-    }
-    .section-title {
-        font-size: 2em;
-    }
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-}
-/* --- 4. Unique Value Proposition Section --- */
-/* ==================================================================== */
-/* 4. SOCIAL PROOF SECTION STYLES                                       */
-/* ==================================================================== */
 .social-proof-section {
-    background-color: #ffffff;
-    padding: 80px 20px;
+    background-color: #ecf0f1; /* Light gray background to break flow */
+    padding: 60px 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.social-proof-section .pitch-summary {
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
 
 .social-proof-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .social-preview-card {
-    flex: 0 0 45%; /* Limits card width */
-    max-width: 500px;
-    background-color: #fdfdfd;
-    padding: 30px;
+    background: white;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-
-.social-preview-card:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .social-preview-card h3 {
-    font-size: 1.6em;
-    color: #34495e;
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 .social-preview-card h3 i {
-    color: #e67e22; /* Accent icon color */
+    color: #e67e22;
     margin-right: 8px;
 }
 
-/* Styling for image placeholder to resemble the attached screenshot */
-.social-preview-card [alt*="Image of"] { 
-    display: block;
+.social-preview-card p {
+    color: #777;
+    flex-grow: 1; /* Pushes the link button down */
+}
+
+.social-preview-card img {
     width: 100%;
-    height: 300px;
-    background-color: #ecf0f1; /* Light gray box for preview */
-    color: #999;
-    line-height: 300px;
-    text-align: center;
+    height: auto;
     border-radius: 8px;
-    margin: 20px 0;
-    font-style: italic;
-    font-size: 0.9em;
-    object-fit: cover; /* Important for actual images */
+    margin: 15px 0;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.icon-container-large {
+    color: #34495e;
+    font-size: 3em;
+    padding: 40px 0;
 }
 
 .preview-link {
-    display: inline-block;
-    color: #3498db;
+    display: block;
     text-decoration: none;
+    color: #e67e22;
     font-weight: 600;
-    margin-top: 10px;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
+    margin-top: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    transition: color 0.3s;
 }
 
 .preview-link:hover {
-    border-bottom: 2px solid #3498db;
+    color: #d35400;
 }
 
-/* ==================================================================== */
-/* 5. FOOTER STYLES (Recruiter-Blowing CTA)                              */
-/* ==================================================================== */
-footer {
-    background-color: #2c3e50; /* Dark background from header */
-    color: white;
-    text-align: center;
-    padding: 40px 20px 20px; /* Increased padding */
-}
+/* --- Media Queries for Mobile Responsiveness --- */
 
-.footer-content {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-}
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+        gap: 30px;
+    }
 
-.footer-cta-headline {
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #f8f9fa; /* Slightly off-white for contrast */
-}
+    .hero-image-placeholder {
+        min-height: 250px;
+        width: 100%;
+    }
 
-.footer-cta-button {
-    /* Reusing the primary CTA button styles but adjusting the color */
-    background-color: #e67e22; /* High-impact accent color */
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.2em;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
-}
+    .main-headline {
+        font-size: 2.5em;
+    }
 
-.footer-cta-button:hover {
-    background-color: #d35400; /* Darker orange on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
-}
+    .stack-categories-grid {
+        grid-template-columns: 1fr;
+    }
 
-.copyright {
-    font-size: 0.9em;
-    color: #bdc3c7;
-}
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    color: #2c3e50;
-    position: relative;
-    display: inline-block;
-    font-weight: 700;
-    text-align: center;
-}
+    .experience-card {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
 
-/* --- Social Proof Grid Changes --- */
+    .highlight-experience {
+        padding: 30px 0 50px;
+    }
 
-.social-proof-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Tighter gap for three columns */
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.social-preview-card {
-    /* Updated flex property to handle 3 columns nicely on large screens */
-    flex: 0 0 30%; 
-    min-width: 300px; /* Minimum size before wrapping */
-    max-width: 350px;
-    background-color: #fdfdfd;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-
-/* Ensure images fit nicely into the card */
-.social-preview-card img { 
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* New style for the icon-only cards (Facebook, LinkedIn) */
-.icon-container-large {
-    font-size: 6em;
-    color: #3498db;
-    margin: 30px 0;
-    height: 300px; /* Matches the image height for visual consistency */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f2f5;
-    border-radius: 8px;
-}
-
-/* Responsive adjustment for small screens: makes cards full width */
-@media (max-width: 1000px) {
-    .social-preview-card {
-        flex: 0 0 45%; 
+    .social-proof-section {
+        padding: 40px 20px;
     }
 }
-@media (max-width: 768px) {
-    .social-preview-card {
-        flex: 0 0 100%;
-    }
-}
+
+/* ------------------------------------------------------------------- */
+/* --- ABOUT PAGE SPECIFIC STYLES (Focusing only on main content) --- */
