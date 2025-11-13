@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edwin Tsembegano - Front-End Developer & Strategist</title>
+    <!-- Use the GLOBAL style.css for shared elements (Header/Footer) -->
+    <link rel="stylesheet" href="/public/css/style.css"> 
+    <!-- Use homepage.css for unique page content styling -->
     <link rel="stylesheet" href="/public/css/homepage.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
@@ -11,19 +14,23 @@
 </head>
 <body>
 
-    <header>
+    <!--
+        UPDATED HEADER: Using the standard structure defined in public/css/style.css 
+        All links are now relative for proper navigation across the site.
+    -->
+    <header class="main-header">
         <nav>
-            <div class="logo">Edwin Tsembegano</div>
+            <div class="logo">My Portfolio</div>
             <ul>
-                <li><a href="/public/index.html" class="active">Home</a></li>
-                <li><a href="/public/projects.html">Projects</a></li>
-                <li><a href="/public/about.html">About</a></li>
-                <li><a href="/public/contact.html">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="home-page-main">
         
         <section class="hero-section" id="home">
             <div class="hero-content-professional">
@@ -32,12 +39,13 @@
                     React.js Developer. Architecturally Minded. Strategically Driven.
                 </h1>
                 <p class="pitch-summary">
-                    Highly motivated Front-End Developer specializing in **React.js** and **Responsive Design**[cite: 7]. I blend a **precision architectural mindset** with digital marketing strategy to build user interfaces (UI) that are not only robust but also intentionally designed to enhance **UX** and achieve business goals[cite: 8].
+                    Highly motivated Front-End Developer specializing in **React.js** and **Responsive Design**. I blend a **precision architectural mindset** with digital marketing strategy to build user interfaces (UI) that are not only robust but also intentionally designed to enhance **UX** and achieve business goals.
                 </p>
-                <a href="/public/projects.html" class="cta-button">Explore My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="projects.html" class="cta-button primary-cta">Explore My Work <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="hero-image-placeholder">
-                </div>
+                <!-- Placeholder for image or custom graphic -->
+            </div>
         </section>
 
         <section class="technical-stack-section">
@@ -48,29 +56,29 @@
                 <div class="category-card">
                     <h3><i class="fas fa-code"></i> Front-End Stack</h3>
                     <ul>
-                        <li>React.js [cite: 11]</li>
-                        <li>JavaScript (ES6+) [cite: 11]</li>
-                        <li>Responsive Design [cite: 11]</li>
+                        <li>React.js</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
                     </ul>
                 </div>
 
                 <div class="category-card">
                     <h3><i class="fas fa-tools"></i> Web Fundamentals</h3>
                     <ul>
-                        <li>HTML5 & CSS3 [cite: 11]</li>
-                        <li>Bootstrap [cite: 11]</li>
-                        <li>RESTful APIs [cite: 11]</li>
-                        <li>Web Accessibility [cite: 11]</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>RESTful APIs</li>
+                        <li>Web Accessibility</li>
                     </ul>
                 </div>
 
                 <div class="category-card">
                     <h3><i class="fas fa-rocket"></i> Tools & Deployment</h3>
                     <ul>
-                        <li>Git & npm [cite: 11]</li>
-                        <li>UI/UX Principles [cite: 11]</li>
-                        <li>Vercel / Netlify [cite: 11]</li>
-                        <li>WordPress Hosting [cite: 11]</li>
+                        <li>Git & npm</li>
+                        <li>UI/UX Principles</li>
+                        <li>Vercel / Netlify</li>
+                        <li>WordPress Hosting</li>
                     </ul>
                 </div>
             </div>
@@ -81,69 +89,69 @@
             <div class="experience-card">
                 <div class="icon-container"><i class="fas fa-pencil-ruler"></i></div>
                 <h3>Architectural Precision</h3>
-                <p>Meticulous attention to detail and spatial reasoning acquired through my Architectural Technology diploma[cite: 53, 54]. I approach code structure and interface layout with an engineer's exactness.</p>
+                <p>Meticulous attention to detail and spatial reasoning acquired through my Architectural Technology diploma. I approach code structure and interface layout with an engineer's exactness.</p>
             </div>
             <div class="experience-card">
                 <div class="icon-container"><i class="fas fa-bullhorn"></i></div>
                 <h3>Digital Strategy Focus</h3>
-                <p>Professional experience as a Digital Marketing Officer [cite: 70] means every development decision is rooted in **user experience** and driven by measurable **business goals**[cite: 77].</p>
+                <p>Professional experience as a Digital Marketing Officer means every development decision is rooted in **user experience** and driven by measurable **business goals**.</p>
             </div>
-            <a href="/public/about.html" class="cta-button secondary-cta">Read the Full Story on the About Page <i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="about.html" class="cta-button secondary-cta">Read the Full Story on the About Page <i class="fas fa-long-arrow-alt-right"></i></a>
+        </section>
+
+        <section class="social-proof-section">
+            <h2 class="section-title">See My Strategic & Creative Edge</h2>
+            <p class="pitch-summary">
+                My coding expertise is amplified by a proven digital track record in content creation, visual design, and strategy development.
+            </p>
+            
+            <div class="social-proof-grid">
+                
+                <div class="social-preview-card">
+                    <h3><i class="fab fa-instagram"></i> EdwinCreates (Visual Strategy)</h3>
+                    <p>Showcasing Digital Marketing & Content Strategy in action.</p>
+                    
+                    <img src="https://placehold.co/400x300/2c3e50/ffffff?text=Instagram+Content+Preview" alt="Instagram/Facebook Content Preview">
+                    
+                    <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">View My Strategy in Action</a>
+                </div>
+
+                <div class="social-preview-card">
+                    <h3><i class="fab fa-facebook-f"></i> EdwinCreates (Facebook)</h3>
+                    <p>Extending reach and engaging audiences across a leading platform.</p>
+                    
+                    <div class="icon-container-large"><i class="fab fa-facebook-f"></i></div>
+                    
+                    <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">Visit My Facebook Page</a>
+                </div>
+                
+                <div class="social-preview-card">
+                    <h3><i class="fab fa-linkedin"></i> Edwin Tsembegano</h3>
+                    <p>Connecting architectural precision with React development.</p>
+                    
+                    <div class="icon-container-large"><i class="fab fa-linkedin"></i></div>
+                    
+                    <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/Profile" target="_blank" class="preview-link">Connect Now</a>
+                </div>
+            </div>
         </section>
 
     </main>
 
-   <section class="social-proof-section">
-    <h2 class="section-title">See My Strategic & Creative Edge</h2>
-    <p class="pitch-summary">
-        [cite_start]My coding expertise is amplified by a proven digital track record in content creation, visual design, and strategy development[cite: 61, 65, 76].
-    </p>
-    
-    <div class="social-proof-grid">
-        
-        <div class="social-preview-card">
-            <h3><i class="fab fa-instagram"></i> EdwinCreates (Visual Strategy)</h3>
-            [cite_start]<p>Showcasing Digital Marketing & Content Strategy in action[cite: 70, 75].</p>
-            
-            <img src="/public/img/Screenshot 2025-11-10 120340.png" alt="Instagram/Facebook Content Preview">
-            
-            <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">View My Strategy in Action</a>
+    <!--
+        UPDATED FOOTER: Using the standard structure defined in public/css/style.css 
+    -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-cta-headline">
+                I don't just build code; I architect digital outcomes.
+            </p>
+            <a href="contact.html" class="cta-button footer-cta-button">
+                Let's Architect Your Next Project <i class="fas fa-handshake"></i>
+            </a>
         </div>
+        <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
+    </footer>
 
-        <div class="social-preview-card">
-            <h3><i class="fab fa-facebook-f"></i> EdwinCreates (Facebook)</h3>
-            <p>Extending reach and engaging audiences across a leading platform.</p>
-            
-            <div class="icon-container-large"><i class="fab fa-facebook-f"></i></div>
-            
-            <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">Visit My Facebook Page</a>
-        </div>
-        
-        <div class="social-preview-card">
-            <h3><i class="fab fa-linkedin"></i> Edwin Tsembegano</h3>
-            [cite_start]<p>Connecting architectural precision with React development[cite: 8, 54].</p>
-            
-            <div class="icon-container-large"><i class="fab fa-linkedin"></i></div>
-            
-            <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/Profile" target="_blank" class="preview-link">Connect Now</a>
-        </div>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="footer-content">
-        <p class="footer-cta-headline">
-            I don't just build code; I architect digital outcomes.
-        </p>
-        <a href="/public/contact.html" class="cta-button footer-cta-button">
-            Let's Architect Your Next Project <i class="fas fa-handshake"></i>
-        </a>
-    </div>
-    <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
-</footer>
-
-<script src="/public/js/script.js"></script>
 </body>
 </html>
