@@ -1,56 +1,61 @@
-# Front-End Developer Showcase
+# 🚀 Edwin Tsembegano | Front-End Developer Portfolio
 
-A multi-page web application demonstrating essential front-end skills. This project features a clean UI, interactive components, and dynamic data handling via a mock API.
+## 🌟 Live Demo
+[Visit the live site here](#) *(Replace `#` with your Firebase deployment URL)*
 
-![Homepage Screenshot](./Img/LS%20March%20Post.png)
-> **Tip:** Update the image above with a screenshot of your actual homepage for best results.
-
----
-
-## 📖 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Contact](#contact)
+## 🌟 Project Spotlight: The Developer's Digital Showcase
+This repository contains the source code for my professional portfolio—a high-performance digital showcase designed to demonstrate my proficiency in Front-End Development and Architectural Design. The site is optimized for speed, pixel-perfect responsiveness, and features a unified design system that reflects my commitment to architectural precision and superior User Experience (UX).
 
 ---
 
-## About
+## ✨ The Front-End Edge: Blending Code with Strategy
+My approach to development combines technical expertise with strategic design thinking, ensuring every feature is robust and goal-driven:
 
-This project is a practical showcase of front-end development. It includes Home, About, and Contact pages, built with modern HTML, CSS, and JavaScript for a responsive, interactive experience. Data is fetched and managed using `json-server` to simulate a REST API.
-
----
-
-## Features
-
-- **Responsive Design:** Adapts to all screen sizes.
-- **Multi-Page Navigation:** Separate pages for different content.
-- **Dynamic Data:** Fetches and displays data from a local mock API.
-- **Interactive UI:** Engaging user experience powered by JavaScript.
+- **Architectural Precision (Design & Structure):** Leveraging my background in Architectural Technology, the interface structure is meticulously detailed for flawless visual hierarchy, maintainability, and clean, reusable code.
+- **User Experience (UX) First:** Every technical and design decision is aligned with optimizing the User Experience (UX), informed by my experience in Digital Marketing to meet measurable business and branding objectives.
+- **Unified Design System:** Successfully implemented a global CSS structure (`public/css/style.css`) to enforce consistency and a strong visual identity across all navigation, header, and footer elements.
 
 ---
 
-## Technologies
+## 💻 Technical Stack & Core Competencies
+This project demonstrates mastery of the core building blocks of the web:
 
-- **HTML5:** Page structure and content.
-- **CSS3:** Styling and layout.
-- **JavaScript (ES6+):** Interactivity and API integration.
-- **JSON Server:** Mock REST API for development.
+| **Category**       | **Technologies Used**       | **Key Concepts Demonstrated**          |
+|---------------------|-----------------------------|-----------------------------------------|
+| **Markup & Style**  | HTML5, CSS3                | Responsive Design, CSS Variables        |
+| **Logic**           | Vanilla JavaScript (ES6+)  | DOM Manipulation, Form Validation       |
+| **Layout**          | Semantic HTML, CSS Grid, Flexbox | Modern Layout Techniques, Accessibility |
+| **Deployment**      | Firebase Hosting           | CDN, Secure/Reliable Hosting            |
 
 ---
 
-## Getting Started
+## 💡 Key Features for a Seamless Experience
+- **Sticky, Consistent Navigation:** A uniform navigation bar is implemented across all core pages (Home, Projects, About, Contact) for effortless site flow.
+- **Mobile-First Responsive Layout:** Designed using advanced CSS techniques to guarantee a flawless, performant experience on all devices (mobile, tablet, and desktop).
+- **Functional Contact Form:** A front-end contact form for direct and easy communication.
+- **Professional Branding:** Distinctive typography and a dark-blue/orange color palette for a strong, memorable visual identity.
 
-To run the project locally, follow these steps:
+---
 
-### Prerequisites
+## ⚙️ Local Development Setup
+Follow these steps to quickly get a copy of the project running locally:
 
-Install [Node.js](https://nodejs.org/) and npm. Verify installation:
-```sh
-node -v
-npm -v
+1. **Clone the repository:**
+    ```bash
+    git clone [Your Repository URL]
+    ```
+2. **Navigate to the project directory:**
+    ```bash
+    cd [your-project-folder]
+    ```
+3. **Launch the site:**
+    Open the `index.html` file in your preferred browser.
+    Example:
+    ```
+    file:///path/to/your/portfolio/index.html
+    ```
+
+---
+
+## ☁️ Deployment
+The project is hosted on Firebase Hosting, leveraging its global Content Delivery Network (CDN) for fast, secure, and reliable content delivery worldwide.
