@@ -60,3 +60,61 @@ You're about to initialize a Firebase project in this directory:
 [info] 
 [info] +  Success! Logged into GitHub as Edvusae 
 [info] 
+[debug] [2025-11-19T09:28:16.593Z] >>> [apiv2][query] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:28:17.052Z] <<< [apiv2][status] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:28:17.052Z] <<< [apiv2][body] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:39:42.491Z] >>> [apiv2][query] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:39:42.925Z] <<< [apiv2][status] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:39:42.925Z] <<< [apiv2][body] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:39:51.721Z] >>> [apiv2][query] GET https://api.github.com/repos/Edvuse/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:39:52.151Z] <<< [apiv2][status] GET https://api.github.com/repos/Edvuse/actions/secrets/public-key 404
+[debug] [2025-11-19T09:39:52.151Z] <<< [apiv2][body] GET https://api.github.com/repos/Edvuse/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-11-19T09:43:22.270Z] >>> [apiv2][query] GET https://api.github.com/repos/edvusae/mySecondProject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:43:22.711Z] <<< [apiv2][status] GET https://api.github.com/repos/edvusae/mySecondProject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:43:22.711Z] <<< [apiv2][body] GET https://api.github.com/repos/edvusae/mySecondProject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:43:53.895Z] >>> [apiv2][query] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:43:54.320Z] <<< [apiv2][status] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:43:54.320Z] <<< [apiv2][body] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:43:55.341Z] >>> [apiv2][query] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:43:55.709Z] <<< [apiv2][status] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:43:55.710Z] <<< [apiv2][body] GET https://api.github.com/repos/edvusae/mysecondproject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:44:21.220Z] >>> [apiv2][query] GET https://api.github.com/repos/My-Todo-List-App/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:44:21.879Z] <<< [apiv2][status] GET https://api.github.com/repos/My-Todo-List-App/actions/secrets/public-key 404
+[debug] [2025-11-19T09:44:21.880Z] <<< [apiv2][body] GET https://api.github.com/repos/My-Todo-List-App/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-11-19T09:45:57.496Z] >>> [apiv2][query] GET https://api.github.com/repos/mysecondproject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:45:57.919Z] <<< [apiv2][status] GET https://api.github.com/repos/mysecondproject/actions/secrets/public-key 404
+[debug] [2025-11-19T09:45:57.919Z] <<< [apiv2][body] GET https://api.github.com/repos/mysecondproject/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-11-19T09:46:24.249Z] >>> [apiv2][query] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:46:24.849Z] <<< [apiv2][status] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key 401
+[debug] [2025-11-19T09:46:24.850Z] <<< [apiv2][body] GET https://api.github.com/repos/Edvusae/mySecondProject/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}
+[debug] [2025-11-19T09:47:14.982Z] >>> [apiv2][query] GET https://api.github.com/repos/firebase logout/actions/secrets/public-key type=owner
+[debug] [2025-11-19T09:47:15.421Z] <<< [apiv2][status] GET https://api.github.com/repos/firebase logout/actions/secrets/public-key 404
+[debug] [2025-11-19T09:47:15.421Z] <<< [apiv2][body] GET https://api.github.com/repos/firebase logout/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
