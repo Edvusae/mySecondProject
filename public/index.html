@@ -1,156 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edwin Tsembegano - Front-End Developer & Strategist</title>
-    <!-- Use the GLOBAL style.css for shared elements (Header/Footer) -->
-    <link rel="stylesheet" href="/public/css/style.css"> 
-    <!-- Using homepage.css for unique page content styling -->
-    <link rel="stylesheet" href="/public/css/homepage.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/public/img/Edlogo.jpg" >
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <!--
-        UPDATED HEADER: Using the standard structure defined in public/css/style.css 
-        All links are now relative for proper navigation across the site.
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.6.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.6.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.6.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
     -->
-    <header class="main-header">
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <main class="home-page-main">
-        
-        <section class="hero-section" id="home">
-            <div class="hero-content-professional">
-                <p class="greeting">Hello, I'm Edwin Tsembegano.</p>
-                <h1 class="main-headline">
-                    React.js Developer. Architecturally Minded. Strategically Driven.
-                </h1>
-                <p class="pitch-summary">
-                    Highly motivated Front-End Developer specializing in **React.js** and **Responsive Design**. I blend a **precision architectural mindset** with digital marketing strategy to build user interfaces (UI) that are not only robust but also intentionally designed to enhance **UX** and achieve business goals.
-                </p>
-                <a href="projects.html" class="cta-button primary-cta">Explore My Work <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="hero-image-placeholder">
-                <img src="/public/img/119368.jpg" alt="Hero Image Placeholder">
-            </div>
-        </section>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-        <section class="technical-stack-section">
-            <h2 class="section-title">My Comprehensive Technical Toolkit</h2>
-            
-            <div class="stack-categories-grid">
-                
-                <div class="category-card">
-                    <h3><i class="fas fa-code"></i> Front-End Stack</h3>
-                    <ul>
-                        <li>React.js</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-                <div class="category-card">
-                    <h3><i class="fas fa-tools"></i> Web Fundamentals</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>Bootstrap</li>
-                        <li>RESTful APIs</li>
-                        <li>Web Accessibility</li>
-                    </ul>
-                </div>
-
-                <div class="category-card">
-                    <h3><i class="fas fa-rocket"></i> Tools & Deployment</h3>
-                    <ul>
-                        <li>Git & npm</li>
-                        <li>UI/UX Principles</li>
-                        <li>Vercel / Netlify</li>
-                        <li>WordPress Hosting</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="highlight-experience">
-            <h2 class="section-title">The Strategic Advantage</h2>
-            <div class="experience-card">
-                <div class="icon-container"><i class="fas fa-pencil-ruler"></i></div>
-                <h3>Architectural Precision</h3>
-                <p>Meticulous attention to detail and spatial reasoning acquired through my Architectural Technology diploma. I approach code structure and interface layout with an engineer's exactness.</p>
-            </div>
-            <div class="experience-card">
-                <div class="icon-container"><i class="fas fa-bullhorn"></i></div>
-                <h3>Digital Strategy Focus</h3>
-                <p>Professional experience as a Digital Marketing Officer means every development decision is rooted in **user experience** and driven by measurable **business goals**.</p>
-            </div>
-            <a href="about.html" class="cta-button secondary-cta">Read the Full Story on the About Page <i class="fas fa-long-arrow-alt-right"></i></a>
-        </section>
-
-        <section class="social-proof-section">
-            <h2 class="section-title">See My Strategic & Creative Edge</h2>
-            <p class="pitch-summary">
-                My coding expertise is amplified by a proven digital track record in content creation, visual design, and strategy development.
-            </p>
-            
-            <div class="social-proof-grid">
-                
-                <div class="social-preview-card">
-                    <h3><i class="fab fa-instagram"></i> EdwinCreates (Visual Strategy)</h3>
-                    <p>Showcasing Digital Marketing & Content Strategy in action.</p>
-                    
-                    <img src="https://placehold.co/400x300/2c3e50/ffffff?text=Instagram+Content+Preview" alt="Instagram/Facebook Content Preview">
-                    
-                    <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">View My Strategy in Action</a>
-                </div>
-
-                <div class="social-preview-card">
-                    <h3><i class="fab fa-facebook-f"></i> EdwinCreates (Facebook)</h3>
-                    <p>Extending reach and engaging audiences across a leading platform.</p>
-                    
-                    <div class="icon-container-large"><i class="fab fa-facebook-f"></i></div>
-                    
-                    <a href="https://www.edwintsembegano.com" target="_blank" class="preview-link">Visit My Facebook Page</a>
-                </div>
-                
-                <div class="social-preview-card">
-                    <h3><i class="fab fa-linkedin"></i> Edwin Tsembegano</h3>
-                    <p>Connecting architectural precision with React development.</p>
-                    
-                    <div class="icon-container-large"><i class="fab fa-linkedin"></i></div>
-                    
-                    <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/Profile" target="_blank" class="preview-link">Connect Now</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!--
-        UPDATED FOOTER: Using the standard structure defined in public/css/style.css 
-    -->
-    <footer>
-        <div class="footer-content">
-            <p class="footer-cta-headline">
-                I don't just build code; I architect digital outcomes.
-            </p>
-            <a href="contact.html" class="cta-button footer-cta-button">
-                Let's Architect Your Next Project <i class="fas fa-handshake"></i>
-            </a>
-        </div>
-        <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
-    </footer>
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
