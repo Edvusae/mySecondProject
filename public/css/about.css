@@ -1,174 +1,564 @@
-/* --- About Page Structure --- */
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
 
 .about-page-main {
-    /* Use a standard large padding top to clear the fixed header */
-    padding: 120px 40px 80px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px 80px;
 }
 
-.about-content-wrapper {
-    max-width: 900px; /* Set max readable width */
-    margin: 0 auto; /* Crucial: Centers the content container */
-}
+/* ========================================
+   HERO SECTION
+   ======================================== */
 
-/* --- Hero Section --- */
-
-.about-me-hero {
+.about-hero {
     text-align: center;
-    /* Increased vertical spacing above and below the hero for breathing room */
-    margin-bottom: 40px;
-    padding-bottom: 30px; 
+    padding: 60px 0 80px;
     border-bottom: 2px solid #f4f4f4;
 }
 
-.about-me-hero h1 {
+.about-hero h1 {
     font-size: 3.8em;
     font-weight: 900;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-tagline {
+    font-size: 1.4em;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+/* ========================================
+   MY STORY SECTION
+   ======================================== */
+
+.my-story-section {
+    padding: 80px 0;
+}
+
+.story-content h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.lead-paragraph {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #fff9f5 0%, #ffe9d6 100%);
+    border-left: 5px solid #e67e22;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.highlight-box i {
+    font-size: 2.5em;
+    color: #e67e22;
+    flex-shrink: 0;
+}
+
+.highlight-box p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ========================================
+   EXPERIENCE TIMELINE
+   ======================================== */
+
+.experience-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 0 -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-top: -40px;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #e67e22;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -42px;
+    width: 20px;
+    height: 20px;
+    background: #e67e22;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #e67e22;
+}
+
+.timeline-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+}
+
+.company {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.duration {
+    background: linear-gradient(135deg, #fff9f5 0%, #ffe9d6 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #d35400;
+    white-space: nowrap;
+}
+
+.location {
+    color: #7f8c8d;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.location i {
+    color: #e67e22;
+    margin-right: 8px;
+}
+
+.role-description {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.key-achievements h4 {
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.key-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-achievements li {
+    padding: 6px 0 6px 25px;
+    position: relative;
+    color: #555;
+}
+
+.key-achievements li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.skill-tags span {
+    padding: 6px 14px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* ========================================
+   EDUCATION SECTION
+   ======================================== */
+
+.education-section {
+    padding: 80px 0;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.education-card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.education-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.education-icon i {
+    font-size: 2em;
+    color: white;
+}
+
+.education-card h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.institution {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.05em;
     margin-bottom: 5px;
 }
 
-.about-me-hero h2 {
-    font-size: 1.8em;
-    font-weight: 500;
-    color: #555;
-    margin-top: 0;
-}
-
-.accent-text {
-    color: #e67e22; /* Accent Orange/Gold */
-}
-
-/* --- Main Text Section --- */
-
-.about-me-text-section {
-    padding: 0 20px;
-}
-
-.summary-paragraph {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 60px; 
-    text-align: left; 
-}
-
-.closing-paragraph {
-    font-size: 1.1em;
-    font-style: italic;
+.dates {
     color: #7f8c8d;
-    margin-top: 60px; 
-    text-align: left;
+    font-size: 0.95em;
+    margin-bottom: 8px;
 }
 
-/* --- Unique Value Section --- */
-
-.unique-value-section {
-    /* Removed padding to let grid items handle spacing */
-    padding: 0;
-    /* Removing background and shadow from the container, relying on grid items */
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
+.credential {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
-.unique-value-section h3 {
-    font-size: 1.8em;
+.education-details h4 {
+    font-size: 1em;
     color: #2c3e50;
-    /* Added top padding to separate it from the summary text */
-    padding-top: 20px;
-    margin-bottom: 40px; 
-    text-align: center;
+    margin: 15px 0 10px 0;
 }
 
-.value-points-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Increased gap between points */
-    gap: 35px; 
+.education-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
 }
 
-.value-point {
-    /* REFACTOR: Clean, white card style for each point */
-    padding: 30px; 
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow on the card */
-    border-left: 5px solid #e67e22; /* Thicker Accent color highlight on the left */
-    /* Removed light border from container, relying on shadow */
-    transition: transform 0.3s ease;
+.education-details li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    color: #555;
+    font-size: 0.95em;
 }
 
-.value-point:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.value-point h4 {
-    font-size: 1.4em; /* Slightly larger title */
-    color: #34495e;
-    margin-top: 0;
-    margin-bottom: 15px; 
-    display: flex; /* For inline icon and text alignment */
-    align-items: center;
-}
-
-.value-point i {
+.education-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
     color: #e67e22;
-    font-size: 1.1em;
-    margin-right: 12px;
+    font-weight: bold;
 }
 
-.value-point p {
-    color: #666;
+.description {
+    color: #555;
     line-height: 1.6;
-    margin: 0;
+    margin-bottom: 15px;
 }
 
-/* --- CTA Button --- */
+/* ========================================
+   CERTIFICATIONS SECTION
+   ======================================== */
 
-.cta-button-secondary {
-    display: block;
-    width: fit-content;
-    margin: 50px auto 0 auto;
-    
-    background-color: #e67e22;
+.certifications-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    margin: 0 -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.certifications-section .section-title,
+.certifications-section .section-subtitle {
     color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.cert-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cert-badge i {
+    font-size: 1.8em;
+    color: white;
+}
+
+.cert-card h3 {
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cert-issuer {
+    color: #e67e22;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 5px;
 }
 
-.cta-button-secondary:hover {
-    background-color: #d35400;
-    transform: translateY(-2px);
+.cert-date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
-.cta-button-secondary i {
-    margin-left: 10px;
+.cert-id {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    word-break: break-all;
 }
 
-/* --- Media Queries for Responsiveness --- */
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
 
-@media (max-width: 768px) {
+.cert-skills span {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    font-size: 0.85em;
+    color: white;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
+.about-cta-section {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.about-cta-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-cta-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 35px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
     .about-page-main {
-        padding: 100px 20px 60px;
+        padding: 100px 30px 60px;
     }
-    .about-content-wrapper {
-        max-width: 100%;
-    }
-    .value-points-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .value-point {
-        padding: 25px;
-    }
-    .value-point h4 {
-        font-size: 1.3em;
-    }
-    .cta-button-secondary {
-        width: 100%;
-        margin: 40px 0 0 0;
+    
+    .about-hero h1 {
+        font-size: 3.2em;
     }
 }
-/* --- End of About Page Styles --- */
+
+@media (max-width: 900px) {
+    .about-hero h1 {
+        font-size: 2.6em;
+    }
+    
+    .timeline {
+        padding-left: 40px;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-marker {
+        left: -37px;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .duration {
+        align-self: flex-start;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-page-main {
+        padding: 90px 20px 50px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1em;
+    }
+    
+    .lead-paragraph {
+        font-size: 1.1em;
+    }
+    
+    .highlight-box {
+        flex-direction: column;
+    }
+    
+    .section-title {
+        font-size: 2.2em;
+    }
+    
+    .experience-section,
+    .certifications-section {
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-marker {
+        left: -32px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
