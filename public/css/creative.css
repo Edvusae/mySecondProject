@@ -1,0 +1,396 @@
+/* ========================================
+   CREATIVE PORTFOLIO PAGE STYLES
+   ======================================== */
+
+.creative-page-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 40px 80px;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.creative-hero {
+    text-align: center;
+    padding: 60px 0 80px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.creative-hero h1 {
+    font-size: 3.8em;
+    font-weight: 900;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   LOGO GALLERY SECTION
+   ======================================== */
+
+.logo-gallery-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 60px;
+}
+
+.logo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.logo-item {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.logo-preview {
+    width: 100%;
+    height: 280px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.logo-item:hover .logo-preview img {
+    transform: scale(1.1);
+}
+
+.logo-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-info h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.logo-info p {
+    color: #7f8c8d;
+    font-size: 0.95em;
+}
+
+.logo-cta {
+    text-align: center;
+}
+
+/* ========================================
+   INSTAGRAM SECTION
+   ======================================== */
+
+.instagram-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    margin: 0 -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.instagram-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.instagram-icon i {
+    font-size: 3.5em;
+    color: white;
+}
+
+.instagram-header h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.instagram-handle {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.instagram-tagline {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* Instagram Feed Grid */
+.instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.instagram-post-wrapper {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Instagram CTA */
+.instagram-cta {
+    text-align: center;
+}
+
+.instagram-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 45px;
+    background: white;
+    color: #E1306C;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-follow-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.instagram-follow-btn i {
+    font-size: 1.4em;
+}
+
+/* ========================================
+   CREATIVE SKILLS SECTION
+   ======================================== */
+
+.creative-skills-section {
+    padding: 80px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card i {
+    font-size: 3em;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
+.creative-cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border-radius: 20px;
+    margin-top: 80px;
+    color: white;
+}
+
+.creative-cta-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.creative-cta-section p {
+    font-size: 1.3em;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.cta-button-large {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);
+}
+
+.cta-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(230, 126, 34, 0.6);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .creative-page-main {
+        padding: 100px 30px 60px;
+    }
+    
+    .logo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .instagram-feed {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .creative-hero h1 {
+        font-size: 3em;
+    }
+    
+    .logo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .creative-page-main {
+        padding: 90px 20px 50px;
+    }
+    
+    .creative-hero h1 {
+        font-size: 2.2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+    
+    .logo-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-preview {
+        height: 250px;
+    }
+    
+    .instagram-section {
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .instagram-feed {
+        gap: 30px;
+    }
+    
+    .instagram-post-wrapper {
+        min-width: 100%;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .creative-cta-section {
+        padding: 60px 20px;
+    }
+    
+    .creative-cta-section h2 {
+        font-size: 2em;
+    }
+    
+    .cta-button-large {
+        padding: 16px 35px;
+        font-size: 1.1em;
+    }
+}
