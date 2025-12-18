@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional web development, digital marketing, and design services by Edwin Tsembegano">
+    <title>Services - Edwin Tsembegano | Web Development & Digital Marketing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/services.css">
+    
+    <link rel="icon" type="image/x-icon" href="/img/Edlogo.jpg">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="main-header">
+        <nav>
+            <div class="logo">Edwin T.</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="creative.html">Creative</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="services-page-main">
+        
+        <!-- Hero Section -->
+        <section class="services-hero">
+            <h1>Professional <span class="gradient-text">Digital Solutions</span></h1>
+            <p class="hero-subtitle">From concept to deployment—I architect digital experiences that drive results</p>
+        </section>
+
+        <!-- Main Services Section -->
+        <section class="main-services-section">
+            
+            <!-- Service 1: Website Development -->
+            <article class="service-detail-card" id="web-dev">
+                <div class="service-number">01</div>
+                <div class="service-detail-content">
+                    <div class="service-icon-large">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h2>Website Development</h2>
+                    <p class="service-lead">
+                        Modern, responsive websites built with cutting-edge technology. From business landing pages 
+                        to complex web applications—I create digital experiences that convert visitors into customers.
+                    </p>
+                    
+                    <div class="service-details-grid">
+                        <div class="detail-column">
+                            <h3>What's Included</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Fully Responsive Design (Mobile, Tablet, Desktop)</li>
+                                <li><i class="fas fa-check-circle"></i> Modern Tech Stack (React.js, Next.js, TypeScript)</li>
+                                <li><i class="fas fa-check-circle"></i> SEO Optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Fast Loading Performance</li>
+                                <li><i class="fas fa-check-circle"></i> Cross-Browser Compatibility</li>
+                                <li><i class="fas fa-check-circle"></i> Contact Forms & WhatsApp Integration</li>
+                                <li><i class="fas fa-check-circle"></i> CMS Integration (Optional)</li>
+                                <li><i class="fas fa-check-circle"></i> 1 Month Post-Launch Support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-column">
+                            <h3>Best For</h3>
+                            <div class="use-cases">
+                                <span class="use-case-tag">Business Websites</span>
+                                <span class="use-case-tag">Portfolio Sites</span>
+                                <span class="use-case-tag">Landing Pages</span>
+                                <span class="use-case-tag">E-commerce</span>
+                                <span class="use-case-tag">Corporate Sites</span>
+                            </div>
+                            
+                            <h3>Tech Stack</h3>
+                            <div class="tech-stack-display">
+                                <span class="tech-badge-service">React.js</span>
+                                <span class="tech-badge-service">Next.js</span>
+                                <span class="tech-badge-service">TypeScript</span>
+                                <span class="tech-badge-service">Tailwind CSS</span>
+                                <span class="tech-badge-service">Firebase</span>
+                                <span class="tech-badge-service">Vercel</span>
+                            </div>
+                            
+                            <div class="pricing-box">
+                                <p class="pricing-label">Pricing</p>
+                                <p class="pricing-value">Custom Quote</p>
+                                <p class="pricing-note">Based on project scope and requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openWhatsApp('webDev')" class="service-cta-button">
+                        <i class="fab fa-whatsapp"></i> Get Your Website Quote
+                    </button>
+                </div>
+            </article>
+
+            <!-- Service 2: Web-Based Systems -->
+            <article class="service-detail-card" id="systems">
+                <div class="service-number">02</div>
+                <div class="service-detail-content">
+                    <div class="service-icon-large">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h2>Web-Based Systems & Portals</h2>
+                    <p class="service-lead">
+                        Custom management systems, dashboards, and portals built to streamline your operations. 
+                        From school management systems to inventory tracking—I create solutions that scale with your business.
+                    </p>
+                    
+                    <div class="service-details-grid">
+                        <div class="detail-column">
+                            <h3>What's Included</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> User Authentication & Authorization</li>
+                                <li><i class="fas fa-check-circle"></i> Role-Based Access Control</li>
+                                <li><i class="fas fa-check-circle"></i> Admin Dashboard</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time Data Updates</li>
+                                <li><i class="fas fa-check-circle"></i> Data Export (Excel, PDF)</li>
+                                <li><i class="fas fa-check-circle"></i> Analytics & Reporting</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive Interface</li>
+                                <li><i class="fas fa-check-circle"></i> 3 Months Post-Launch Support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-column">
+                            <h3>System Types</h3>
+                            <div class="use-cases">
+                                <span class="use-case-tag">School Portals</span>
+                                <span class="use-case-tag">Inventory Systems</span>
+                                <span class="use-case-tag">CRM Platforms</span>
+                                <span class="use-case-tag">Task Management</span>
+                                <span class="use-case-tag">Booking Systems</span>
+                                <span class="use-case-tag">Custom Dashboards</span>
+                            </div>
+                            
+                            <h3>Tech Stack</h3>
+                            <div class="tech-stack-display">
+                                <span class="tech-badge-service">React.js</span>
+                                <span class="tech-badge-service">Node.js</span>
+                                <span class="tech-badge-service">Firebase</span>
+                                <span class="tech-badge-service">RESTful APIs</span>
+                                <span class="tech-badge-service">Real-time DB</span>
+                            </div>
+                            
+                            <div class="pricing-box">
+                                <p class="pricing-label">Pricing</p>
+                                <p class="pricing-value">Custom Quote</p>
+                                <p class="pricing-note">Depends on features & complexity</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openWhatsApp('systems')" class="service-cta-button">
+                        <i class="fab fa-whatsapp"></i> Discuss Your System Requirements
+                    </button>
+                </div>
+            </article>
+
+            <!-- Service 3: Digital Marketing -->
+            <article class="service-detail-card" id="marketing">
+                <div class="service-number">03</div>
+                <div class="service-detail-content">
+                    <div class="service-icon-large">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>Digital Marketing & Strategy</h2>
+                    <p class="service-lead">
+                        Data-driven digital marketing campaigns that grow your business. Certified in Google Ads, 
+                        Facebook Ads, SEO, and Social Media Marketing—I create strategies that deliver measurable ROI.
+                    </p>
+                    
+                    <div class="service-details-grid">
+                        <div class="detail-column">
+                            <h3>What's Included</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Marketing Strategy Development</li>
+                                <li><i class="fas fa-check-circle"></i> Google Ads Campaign Setup & Management</li>
+                                <li><i class="fas fa-check-circle"></i> Facebook & Instagram Ads</li>
+                                <li><i class="fas fa-check-circle"></i> SEO Optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Social Media Content Planning</li>
+                                <li><i class="fas fa-check-circle"></i> Performance Analytics & Reporting</li>
+                                <li><i class="fas fa-check-circle"></i> A/B Testing & Optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Monthly Performance Reviews</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-column">
+                            <h3>Services Offered</h3>
+                            <div class="use-cases">
+                                <span class="use-case-tag">Google Ads</span>
+                                <span class="use-case-tag">Facebook Ads</span>
+                                <span class="use-case-tag">SEO</span>
+                                <span class="use-case-tag">Social Media Marketing</span>
+                                <span class="use-case-tag">Content Strategy</span>
+                                <span class="use-case-tag">Email Marketing</span>
+                            </div>
+                            
+                            <h3>Certifications</h3>
+                            <div class="tech-stack-display">
+                                <span class="tech-badge-service cert">Google Ads</span>
+                                <span class="tech-badge-service cert">Facebook Ads</span>
+                                <span class="tech-badge-service cert">SEO</span>
+                                <span class="tech-badge-service cert">HubSpot</span>
+                            </div>
+                            
+                            <div class="pricing-box">
+                                <p class="pricing-label">Pricing</p>
+                                <p class="pricing-value">Custom Quote</p>
+                                <p class="pricing-note">Based on campaign scope & ad spend</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openWhatsApp('marketing')" class="service-cta-button">
+                        <i class="fab fa-whatsapp"></i> Grow Your Business Now
+                    </button>
+                </div>
+            </article>
+
+            <!-- Service 4: Logo Design & Branding -->
+            <article class="service-detail-card" id="design">
+                <div class="service-number">04</div>
+                <div class="service-detail-content">
+                    <div class="service-icon-large">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h2>Logo Design & Brand Identity</h2>
+                    <p class="service-lead">
+                        Professional logo design and complete brand identity packages. Adobe Certified designer 
+                        creating memorable visuals that capture your brand essence and resonate with your audience.
+                    </p>
+                    
+                    <div class="service-details-grid">
+                        <div class="detail-column">
+                            <h3>What's Included</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Initial Consultation & Brand Discovery</li>
+                                <li><i class="fas fa-check-circle"></i> 3-5 Unique Logo Concepts</li>
+                                <li><i class="fas fa-check-circle"></i> Unlimited Revisions (on chosen concept)</li>
+                                <li><i class="fas fa-check-circle"></i> Color Palette & Typography Guide</li>
+                                <li><i class="fas fa-check-circle"></i> Multiple File Formats (PNG, JPG, SVG, AI, PDF)</li>
+                                <li><i class="fas fa-check-circle"></i> Social Media Kit</li>
+                                <li><i class="fas fa-check-circle"></i> Print-Ready Files</li>
+                                <li><i class="fas fa-check-circle"></i> Brand Style Guide (Optional)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-column">
+                            <h3>Design Styles</h3>
+                            <div class="use-cases">
+                                <span class="use-case-tag">Modern Minimalist</span>
+                                <span class="use-case-tag">Classic Elegant</span>
+                                <span class="use-case-tag">Bold & Vibrant</span>
+                                <span class="use-case-tag">Corporate Professional</span>
+                                <span class="use-case-tag">Creative & Artistic</span>
+                            </div>
+                            
+                            <h3>Tools & Software</h3>
+                            <div class="tech-stack-display">
+                                <span class="tech-badge-service">Illustrator</span>
+                                <span class="tech-badge-service">Photoshop</span>
+                                <span class="tech-badge-service">InDesign</span>
+                            </div>
+                            
+                            <div class="pricing-box">
+                                <p class="pricing-label">Pricing</p>
+                                <p class="pricing-value">Custom Quote</p>
+                                <p class="pricing-note">Logo only or full brand package</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openWhatsApp('logoDesign')" class="service-cta-button">
+                        <i class="fab fa-whatsapp"></i> Design My Brand Identity
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <h2 class="section-title">How We Work Together</h2>
+            <p class="section-subtitle">My streamlined process ensures clear communication and quality results</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery & Consultation</h3>
+                    <p>We discuss your goals, requirements, and vision. I ask questions to understand your business and target audience.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Proposal & Quote</h3>
+                    <p>I provide a detailed proposal with scope, timeline, and custom pricing. You review and approve before we start.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Design & Development</h3>
+                    <p>I create your solution with regular updates and checkpoints. You provide feedback and request revisions as needed.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Delivery & Support</h3>
+                    <p>Final delivery with training and documentation. Post-launch support ensures smooth operation and addresses any issues.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How long does a typical website project take?</h3>
+                    <p>Simple websites: 1-2 weeks. Complex web applications: 4-8 weeks. Timeline depends on scope, features, and revision rounds.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you provide hosting and domain services?</h3>
+                    <p>I can guide you in purchasing your own domain and hosting, or deploy on platforms like Firebase, Vercel, or Netlify. Hosting costs are separate from development fees.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can you work with my existing website?</h3>
+                    <p>Yes! I can redesign, update, or add features to existing websites. I'll assess your current site and recommend the best approach.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What if I need changes after launch?</h3>
+                    <p>All projects include post-launch support. After the support period, I offer maintenance packages or hourly rates for updates.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you offer payment plans?</h3>
+                    <p>Yes! For larger projects, I offer milestone-based payments (e.g., 50% upfront, 50% on delivery). We'll discuss payment terms during the proposal stage.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can you help with ongoing digital marketing?</h3>
+                    <p>Absolutely! I offer monthly retainer packages for ongoing campaign management, content creation, and optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="services-final-cta">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how I can help bring your digital vision to life</p>
+            <button onclick="openWhatsApp('general')" class="cta-button-large">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </button>
+            <p class="cta-subtext">Or email me at <a href="mailto:tsembeganoedwin@gmail.com">tsembeganoedwin@gmail.com</a></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Edwin Tsembegano</h3>
+                    <p>Web Developer & Digital Marketing Strategist based in Harare, Zimbabwe.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Edvusae" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/Edwintcreates" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web-dev">Website Development</a></li>
+                        <li><a href="services.html#systems">Web-Based Systems</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">Logo Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> tsembeganoedwin@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +263 773 403 721</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</li>
+                    </ul>
+                    <button onclick="openWhatsApp('general')" class="footer-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <button onclick="openWhatsApp('general')" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script src="/js/whatsapp-config.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
