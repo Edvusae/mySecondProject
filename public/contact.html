@@ -3,110 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Edwin - Let's Talk</title>
-    <link rel="stylesheet" href="/css/style.css"> 
-     <!-- Use contact.css for unique page content styling -->
-    <link rel="stylesheet" href="/css/contact.css"> 
+    <meta name="description" content="Contact Edwin Tsembegano for web development, digital marketing, and design services">
+    <title>Contact - Edwin Tsembegano | Let's Build Together</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    
+    <link rel="icon" type="image/x-icon" href="/img/Edlogo.jpg">
 </head>
 <body>
+    <!-- Header/Navigation -->
     <header class="main-header">
         <nav>
-            <div class="logo">My Portfolio</div>
-            <ul>
+            <div class="logo">Edwin T.</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="contact-page-main">
-        <div class="contact-container">
-            <section class="contact-hero">
-                <h1 class="accent-text">Get In Touch</h1>
-                <h2>Let's Architect Your Next Digital Solution.</h2>
-                <p>Whether you have a project idea, a job inquiry, or just want to say hello, I'm ready to connect. Fill out the form below or use my direct contact details.</p>
-            </section>
+        
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1 class="accent-text">Get In Touch</h1>
+            <h2>Let's Architect Your Next Digital Solution</h2>
+            <p>Whether you have a project idea, a job inquiry, or just want to say hello, I'm ready to connect. Choose your preferred method below.</p>
+        </section>
 
-            <section class="contact-details-and-form">
+        <!-- Contact Methods Grid -->
+        <section class="contact-methods-grid">
+            <div class="contact-method-card whatsapp">
+                <div class="method-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Fastest way to reach me</p>
+                <button onclick="openWhatsApp('general')" class="method-cta">
+                    Start Chat <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="contact-method-card email">
+                <div class="method-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>For detailed inquiries</p>
+                <a href="mailto:tsembeganoedwin@gmail.com" class="method-cta">
+                    Send Email <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="contact-method-card phone">
+                <div class="method-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>Call me directly</p>
+                <a href="tel:+263773403721" class="method-cta">
+                    Call Now <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Details & Form -->
+        <section class="contact-details-and-form">
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Direct Contact</h3>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:tsembeganoedwin@gmail.com">tsembeganoedwin@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+263773403721">(+263) 773 403 721</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Harare, Zimbabwe</span>
+                </div>
+
+                <h3>Connect Online</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Edvusae" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/Edwintcreates" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+
+                <h3>Working Hours</h3>
+                <div class="working-hours">
+                    <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <h3>Send Me a Message</h3>
+                <p class="form-description">Fill out the form and I'll get back to you within 24 hours</p>
                 
-                <div class="contact-info">
-                    <h3>Direct Contact</h3>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:tsembeganoedwin@gmail.com">tsembeganoedwin@gmail.com</a>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+263773403721">(+263) 773 403 721</a>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Harare, Zimbabwe</span>
-                    </div>
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+263 123 456 789">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interested In *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="website">Website Development</option>
+                        <option value="system">Web-Based System</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="design">Logo Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" onclick="submitViaWhatsApp()" class="cta-button whatsapp-submit">
+                        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                    </button>
+                    <button type="submit" class="cta-button email-submit">
+                        <i class="fas fa-envelope"></i> Send via Email
+                    </button>
+                </div>
+                
+                <p id="formStatus" class="form-status-message"></p>
+            </form>
+        </section>
 
-                    <h3>Connect Online</h3>
+        <!-- FAQ Section -->
+        <section class="contact-faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-clock"></i> How quickly do you respond?</h3>
+                    <p>I typically respond to WhatsApp messages within 2 hours during business hours, and emails within 24 hours.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Do you offer free consultations?</h3>
+                    <p>Yes! Initial consultations are always free. We'll discuss your project and I'll provide a custom quote.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-globe"></i> Do you work with international clients?</h3>
+                    <p>Absolutely! I work with clients worldwide. Communication via WhatsApp, Zoom, or email makes collaboration seamless.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-calendar"></i> What's your typical project timeline?</h3>
+                    <p>Simple websites: 1-2 weeks. Complex systems: 4-8 weeks. Timeline depends on project scope and your requirements.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Edwin Tsembegano</h3>
+                    <p>React & Next.js Developer | Digital Marketing Strategist based in Harare, Zimbabwe.</p>
                     <div class="social-links">
                         <a href="https://github.com/Edvusae" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/Edwintcreates" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Project Inquiry or Hello">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">
-                        Send Message <i class="fas fa-paper-plane"></i>
-                    </button>
-                    <p id="formStatus" class="form-status-message"></p>
-                </form>
-            </section>
-        </div>
-    </main>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
 
-    <footer>
-        <div class="footer-content">
-            <p class="footer-cta-headline">
-                I don't just build code; I architect digital outcomes.
-            </p>
-            <a href="contact.html" class="cta-button footer-cta-button">
-                Let's Architect Your Next Project <i class="fas fa-handshake"></i>
-            </a>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web-dev">Website Development</a></li>
+                        <li><a href="services.html#systems">Web-Based Systems</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> tsembeganoedwin@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +263 773 403 721</li>
+                    </ul>
+                    <button onclick="openWhatsApp('general')" class="footer-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
+            </div>
         </div>
-        <p class="copyright">&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
     </footer>
-    
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <button onclick="openWhatsApp('general')" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script src="/js/whatsapp-config.js"></script>
+    <script src="/js/main.js"></script>
     <script>
-        // Simple form handling (as the backend email sending is not implemented here)
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formStatus = document.getElementById('formStatus');
-            formStatus.textContent = 'Thank you for your message, Edwin will get back to you shortly!';
-            formStatus.classList.add('success');
+        // WhatsApp Form Submission
+        function submitViaWhatsApp() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
             
-            // Optional: Clear the form after a successful "submission"
-            // setTimeout(() => {
-            //     this.reset();
-            //     formStatus.textContent = '';
-            //     formStatus.classList.remove('success');
-            // }, 4000);
+            // Validation
+            if (!name || !email || !service || !subject || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Construct WhatsApp message
+            const whatsappMessage = `Hi Edwin! 👋
+
+*New Contact Form Submission*
+
+*Name:* ${name}
+*Email:* ${email}
+${phone ? `*Phone:* ${phone}` : ''}
+*Service:* ${service}
+*Subject:* ${subject}
+
+*Message:*
+${message}
+
+---
+Sent from your website contact form`;
+            
+            const encoded = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/263773403721?text=${encoded}`, '_blank');
+            
+            // Clear form
+            document.getElementById('contactForm').reset();
+            
+            // Show success message
+            const statusMsg = document.getElementById('formStatus');
+            statusMsg.textContent = 'Message sent via WhatsApp! I\'ll get back to you soon.';
+            statusMsg.classList.add('success');
+            statusMsg.style.opacity = '1';
+            statusMsg.style.visibility = 'visible';
+            
+            setTimeout(() => {
+                statusMsg.style.opacity = '0';
+                statusMsg.style.visibility = 'hidden';
+            }, 5000);
+        }
+        
+        // Email Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const statusMsg = document.getElementById('formStatus');
+            statusMsg.textContent = 'Thank you for your message! I\'ll respond within 24 hours.';
+            statusMsg.classList.add('success');
+            statusMsg.style.opacity = '1';
+            statusMsg.style.visibility = 'visible';
+            
+            // In production, you'd send this to your backend
+            // For now, just clear the form
+            setTimeout(() => {
+                this.reset();
+                statusMsg.style.opacity = '0';
+                statusMsg.style.visibility = 'hidden';
+            }, 4000);
         });
     </script>
 </body>
