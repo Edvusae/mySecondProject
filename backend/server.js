@@ -11,13 +11,13 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+// MongoDB Connection (Updated for Mongoose 8.x - No deprecated options!)
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('✅ MongoDB Connected Successfully'))
-.catch(err => console.error('❌ MongoDB Connection Error:', err));
+.catch(err => {
+  console.error('❌ MongoDB Connection Error:', err.message);
+  process.exit(1); // Exit if database connection fails
+});
 
 // Blog Post Schema
 const blogPostSchema = new mongoose.Schema({
