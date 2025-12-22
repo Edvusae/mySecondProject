@@ -3,7 +3,7 @@
 // ========================================
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api'; // Change for production
+const API_BASE_URL = 'https://your-url.onrender.com/api'; // Change for production
 let allPosts = [];
 let currentEditId = null;
 let deletePostId = null;
