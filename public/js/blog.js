@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogPostsContainer = document.getElementById('blogPostsContainer');
     const noPostsMessage = document.getElementById('noPosts');
     const categoryButtons = document.querySelectorAll('.category-btn');
+    const API_BASE_URL = 'https://your-url.onrender.com/api';
+    let blogPosts = [];
     
     /**
      * Render blog posts to the DOM
