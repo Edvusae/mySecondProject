@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogPostsContainer = document.getElementById('blogPostsContainer');
     const noPostsMessage = document.getElementById('noPosts');
     const categoryButtons = document.querySelectorAll('.category-btn');
-    const API_BASE_URL = 'https://your-url.onrender.com/api';
+    const API_BASE_URL = 'https://mysecondproject-r3h9.onrender.com/api/posts';
     let blogPosts = [];
     
     /**
