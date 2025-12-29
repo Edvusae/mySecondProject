@@ -1,224 +1,574 @@
-/* --- Projects Page Main Styles --- */
+/* ========================================
+   PROJECTS PAGE - REFACTORED STYLES
+   Clean, Simple, Recruiter-Friendly
+   ======================================== */
+
+/* ========================================
+   MAIN CONTAINER
+   ======================================== */
 
 .projects-page-main {
     max-width: 1400px;
     margin: 0 auto;
-    /* Use padding to account for fixed header, ensuring content isn't hidden */
-    padding: 120px 40px 80px; 
+    padding: 120px 40px 80px;
 }
 
-/* --- Introduction Section (UPDATED to match Home Page typography and feel) --- */
+/* ========================================
+   PAGE HEADER SECTION
+   ======================================== */
 
-.projects-intro-section {
-    text-align: left; /* Changed alignment to left, similar to home page hero */
-    padding: 60px 0 80px; /* Increased top padding for better spacing */
-    border-bottom: 2px solid #f4f4f4; 
-    margin-bottom: 40px;
-    max-width: 900px; /* Constrain width for better readability, matching pitch-summary */
-    margin-left: 0;
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.projects-title {
-    font-size: 3.5em; 
-    font-weight: 900; /* Increased weight to match main-headline on home page */
-    line-height: 1.2;
-    color: #2c3e50; 
+.page-header h1 {
+    font-size: 3.5em;
+    font-weight: 900;
     margin-bottom: 15px;
-    margin-top: 0;
+    color: #2c3e50;
+    line-height: 1.2;
 }
 
-.projects-subtitle {
-    font-size: 1.2em; /* Slightly adjusted size */
-    color: #555; 
-    max-width: 900px;
-    margin: 0; /* Removed auto margin as text is now left-aligned */
+.gradient-text {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    max-width: 700px;
+    margin: 0 auto 40px;
     line-height: 1.6;
 }
 
-/* --- Projects Grid and Cards (No changes needed here, they are well styled) --- */
+/* ========================================
+   FILTER SECTION
+   ======================================== */
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    border-color: #e67e22;
+    color: white;
+}
+
+.filter-btn i {
+    font-size: 1em;
+}
+
+/* ========================================
+   PROJECTS GRID
+   ======================================== */
 
 .projects-grid {
     display: grid;
-    /* Maintain the modern three-column look */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px; /* Reduced gap for a tighter, cleaner grid */
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
 }
 
+/* ========================================
+   PROJECT CARD
+   ======================================== */
+
 .project-card {
-    background: #fdfdfd; /* Off-white background for depth */
-    border-radius: 12px; /* Consistent rounded corners */
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Stronger, professional shadow */
-    border: none; /* Removed light border, relying on shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .project-card:hover {
-    transform: translateY(-8px); /* Deeper lift on hover */
-    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.25); /* Accent color glow on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.project-header {
+/* ========================================
+   PROJECT IMAGE/HEADER
+   ======================================== */
+
+.project-image {
+    position: relative;
+    height: 250px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align icon and text properly */
-    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.project-card h3 {
-    font-size: 1.6em;
-    color: #34495e;
+/* Color Variations */
+.project-image.color-1 {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+}
+
+.project-image.color-2 {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.project-image.color-3 {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.project-image.color-4 {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.project-image.color-5 {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.project-image.color-6 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+.project-image i {
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   PROJECT STATUS BADGE
+   ======================================== */
+
+.project-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+}
+
+.status-completed {
+    background: rgba(46, 204, 113, 0.9);
+    color: white;
+}
+
+.status-progress {
+    background: rgba(241, 196, 15, 0.9);
+    color: white;
+}
+
+.status-client {
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+}
+
+/* ========================================
+   PROJECT CONTENT
+   ======================================== */
+
+.project-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.3;
     font-weight: 700;
 }
 
-.project-icon {
-    font-size: 2.5em; /* Larger, more prominent icon */
-    color: #e67e22; /* Accent Orange/Gold */
-    opacity: 0.9;
-    min-width: 40px; /* Ensures text wrap works correctly */
-}
-
-.project-card p {
+.project-description {
     color: #666;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 20px;
-    flex-grow: 1; 
+    flex: 1;
 }
 
-/* --- Tech Tags --- */
+/* ========================================
+   TECH STACK BADGES
+   ======================================== */
 
-.tech-tags {
+.tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-.tech-tags span {
-    background-color: #f4f4f4; /* Light, neutral tag background */
-    color: #2c3e50;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.85em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* --- Project Links --- */
-
-.project-links {
-    display: flex;
-    gap: 10px; /* Reduced gap */
-    margin-top: auto;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.btn {
-    flex-grow: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95em;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn i {
-    margin-right: 8px;
-}
-
-.github-link {
-    background-color: #2c3e50; /* Primary Dark Blue */
-    color: white;
-    border: 2px solid #2c3e50;
-}
-
-.github-link:hover {
-    background-color: #34495e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.live-link {
-    background-color: white;
-    border: 2px solid #e67e22; /* Accent Orange/Gold border */
-    color: #e67e22;
-}
-
-.live-link:hover {
-    background-color: #e67e22;
-    color: white;
-    border-color: #e67e22;
-}
-
-/* --- Projects CTA Footer (No change needed) --- */
-
-.projects-cta-footer {
-    text-align: center;
-    padding: 80px 0 40px;
-}
-
-.projects-cta-footer p {
-    font-size: 1.6em;
-    font-weight: 300;
-    color: #555;
     margin-bottom: 20px;
 }
 
-.primary-cta-button {
-    background-color: #e67e22; /* Accent Orange/Gold */
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.1em;
+.tech-badge {
+    padding: 6px 14px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   PROJECT LINKS/BUTTONS
+   ======================================== */
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 20px;
     border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
 }
 
-.primary-cta-button:hover {
-    background-color: #d35400;
+.btn i {
+    font-size: 1em;
+}
+
+/* Primary Button (GitHub) */
+.btn-primary {
+    background: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background: #34495e;
+    border-color: #34495e;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
 }
 
-/* --- Media Queries for Responsiveness --- */
+/* Secondary Button (Live Demo) */
+.btn-secondary {
+    background: white;
+    color: #e67e22;
+    border-color: #e67e22;
+}
 
+.btn-secondary:hover {
+    background: #e67e22;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* Disabled Button */
+.btn-disabled {
+    background: #ecf0f1;
+    color: #95a5a6;
+    border-color: #ecf0f1;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
+.cta-section {
+    text-align: center;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* CTA Button Styles */
+.cta-btn {
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-btn-primary {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+}
+
+.cta-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+.cta-btn-secondary {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+}
+
+.cta-btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and Medium Screens */
 @media (max-width: 1200px) {
+    .projects-page-main {
+        padding: 100px 30px 60px;
+    }
+
     .projects-grid {
-        /* Adjusted minmax for better use of mid-size screens */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
     }
 }
 
-@media (max-width: 768px) {
-    .projects-page-main {
-        padding: 100px 20px 60px;
+/* Small Tablets and Large Phones */
+@media (max-width: 900px) {
+    .page-header h1 {
+        font-size: 2.8em;
     }
-    .projects-intro-section {
-        text-align: center; /* Center on small screens */
-    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    .projects-title {
-        font-size: 2.5em;
+
+    .filter-section {
+        flex-direction: column;
     }
-    .project-card {
-        padding: 25px;
+
+    .filter-btn {
+        justify-content: center;
     }
-    /* REFACTOR: Ensuring project links look great on mobile */
-    .project-links {
-        flex-direction: row; 
-        gap: 10px;
+
+    .cta-section {
+        padding: 50px 30px;
     }
-    .btn {
-        flex-grow: 1; /* Each button takes up half the width, giving a balanced look */
+
+    .cta-section h2 {
+        font-size: 2em;
     }
 }
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .projects-page-main {
+        padding: 90px 20px 50px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2em;
+    }
+
+    .page-subtitle {
+        font-size: 1em;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-image i {
+        font-size: 4em;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8em;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .project-content h2 {
+        font-size: 1.3em;
+    }
+
+    .tech-badge {
+        font-size: 0.75em;
+        padding: 5px 10px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .filter-section,
+    .cta-section {
+        display: none;
+    }
+
+    .project-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Focus Visible for Keyboard Navigation */
+.filter-btn:focus-visible,
+.btn:focus-visible,
+.cta-btn:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .filter-btn,
+    .btn,
+    .cta-btn {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .project-card {
+        border: 2px solid #2c3e50;
+    }
+
+    .filter-btn {
+        border-width: 3px;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES (Optional)
+   ======================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* End of projects.css */
