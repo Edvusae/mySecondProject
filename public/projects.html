@@ -8,25 +8,35 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/fixes.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="/img/Edlogo.jpg">
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="main-header">
         <nav>
             <div class="logo">Edwin T.</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="projects-page-main">
         <!-- Page Header -->
         <section class="page-header">
             <h1>My <span class="gradient-text">Projects</span></h1>
@@ -52,125 +62,39 @@
         <!-- Projects Grid -->
         <div class="projects-grid">
             
-            <!-- Project 1: Movie App -->
+            <!-- Project 1: Interactive Quiz Builder -->
             <article class="project-card" data-category="web-app">
                 <div class="project-image color-1">
-                    <i class="fas fa-film"></i>
-                    <span class="project-status status-completed">Completed</span>
-                </div>
-                <div class="project-content">
-                    <h2>Interactive Movie Discovery App</h2>
-                    <p class="project-description">
-                        Dynamic movie platform leveraging The Movie Database (TMDb) API for real-time search, 
-                        filtering, and detailed information. Features advanced state management and responsive design.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React.js</span>
-                        <span class="tech-badge">RESTful API</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">CSS3</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Edvusae/new-movie-api" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 2: Malengo -->
-            <article class="project-card" data-category="client">
-                <div class="project-image color-2">
-                    <i class="fas fa-broom"></i>
-                    <span class="project-status status-client">First Client</span>
-                </div>
-                <div class="project-content">
-                    <h2>Malengo Cleaning Services</h2>
-                    <p class="project-description">
-                        Professional business website for Malengo Cleaning Services. Conversion-optimized design 
-                        with strategic CTA placement, WhatsApp integration, and mobile-first responsive layout.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">HTML5</span>
-                        <span class="tech-badge">CSS3</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">Responsive</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Edvusae/Malengo-Cleaning-Services" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 3: PEM -->
-            <article class="project-card" data-category="progress">
-                <div class="project-image color-3">
-                    <i class="fas fa-tasks"></i>
-                    <span class="project-status status-progress">In Progress</span>
-                </div>
-                <div class="project-content">
-                    <h2>Todo Task Management System</h2>
-                    <p class="project-description">
-                        Comprehensive task management system with real-time updates, user authentication, 
-                        collaborative workflows, and analytics dashboard. Built for teams and individuals.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React.js</span>
-                        <span class="tech-badge">Firebase</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">Real-time DB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                        <a href="#" class="btn btn-disabled">
-                            <i class="fas fa-lock"></i> In Development
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 4: Quiz Builder -->
-            <article class="project-card" data-category="progress">
-                <div class="project-image color-4">
                     <i class="fas fa-question-circle"></i>
-                    <span class="project-status status-progress">Adding Features</span>
+                    <span class="project-status status-completed">Completed</span>
                 </div>
                 <div class="project-content">
                     <h2>Interactive Quiz Builder</h2>
                     <p class="project-description">
                         Educational platform for creating, managing, and sharing quizzes. Features dynamic question 
-                        types, timed functionality, and instant feedback. Designed for educators and content creators.
+                        types, instant feedback, and timed functionality. Designed for educators and content creators 
+                        with an intuitive interface.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">React.js</span>
-                        <span class="tech-badge">LocalStorage</span>
                         <span class="tech-badge">JavaScript</span>
                         <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">LocalStorage</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Edvusae/Interactive-Quiz-Builder" target="_blank" class="btn btn-primary">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="#" class="btn btn-disabled">
-                            <i class="fas fa-lock"></i> In Development
+                        <a href="#" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                     </div>
                 </div>
             </article>
 
-            <!-- Project 5: NeonFinance -->
+            <!-- Project 2: NeonFinance -->
             <article class="project-card" data-category="web-app">
-                <div class="project-image color-5">
+                <div class="project-image color-2">
                     <i class="fas fa-dollar-sign"></i>
                     <span class="project-status status-completed">Completed</span>
                 </div>
@@ -178,7 +102,8 @@
                     <h2>NeonFinance - Personal Finance Manager</h2>
                     <p class="project-description">
                         Personal finance management application for tracking income, expenses, and budgets. 
-                        Features visual analytics with Chart.js and promotes better money management habits.
+                        Features visual analytics with Chart.js, category filtering, and promotes better money 
+                        management habits with intuitive dashboards.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">React.js</span>
@@ -197,9 +122,159 @@
                 </div>
             </article>
 
-            <!-- Project 6: Portfolio V1 -->
+            <!-- Project 3: Movie API -->
             <article class="project-card" data-category="web-app">
+                <div class="project-image color-3">
+                    <i class="fas fa-film"></i>
+                    <span class="project-status status-completed">Completed</span>
+                </div>
+                <div class="project-content">
+                    <h2>Movie Discovery Application</h2>
+                    <p class="project-description">
+                        Dynamic movie platform leveraging The Movie Database (TMDb) API for real-time search, 
+                        filtering, and detailed information. Features advanced state management, responsive design, 
+                        and smooth user experience.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">RESTful API</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Edvusae/new-movie-api" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Registration Form -->
+            <article class="project-card" data-category="web-app">
+                <div class="project-image color-4">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="project-status status-completed">Completed</span>
+                </div>
+                <div class="project-content">
+                    <h2>Advanced Registration Form</h2>
+                    <p class="project-description">
+                        Feature-rich registration system with comprehensive form validation, real-time error feedback, 
+                        and elegant user experience design principles. Includes password strength indicators and 
+                        accessibility features.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Form Validation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Edvusae/Registration-form" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Mine Todose (In Progress) -->
+            <article class="project-card" data-category="progress">
+                <div class="project-image color-5">
+                    <i class="fas fa-tasks"></i>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <div class="project-content">
+                    <h2>Mine Todose - Task Management System</h2>
+                    <p class="project-description">
+                        Comprehensive task management system with real-time updates, user authentication, 
+                        collaborative workflows, and analytics dashboard. Built for teams and individuals seeking 
+                        enhanced productivity.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Real-time DB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Edvusae/mine-todoses" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="btn btn-disabled">
+                            <i class="fas fa-lock"></i> In Development
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: SupertechToyotaz (In Progress) -->
+            <article class="project-card" data-category="progress client">
                 <div class="project-image color-6">
+                    <i class="fas fa-car"></i>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <div class="project-content">
+                    <h2>SupertechToyotaz Custom Website</h2>
+                    <p class="project-description">
+                        Custom business website for a professional mechanic company. Features service showcase, 
+                        appointment booking system, customer testimonials, and conversion-optimized design for 
+                        maximum client engagement.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Business Site</span>
+                        <span class="tech-badge">Responsive</span>
+                        <span class="tech-badge">SEO</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-disabled">
+                            <i class="fab fa-github"></i> Private Repo
+                        </a>
+                        <a href="#" class="btn btn-disabled">
+                            <i class="fas fa-lock"></i> In Development
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 7: Brush Master Painting (In Progress) -->
+            <article class="project-card" data-category="progress client">
+                <div class="project-image color-1">
+                    <i class="fas fa-paint-roller"></i>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <div class="project-content">
+                    <h2>Brush Master Painting Company</h2>
+                    <p class="project-description">
+                        Professional website for a painting company showcasing services, portfolio gallery, and quote 
+                        request system. Emphasis on visual appeal, conversion optimization, and mobile-first design 
+                        for better user experience.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Portfolio Site</span>
+                        <span class="tech-badge">Gallery</span>
+                        <span class="tech-badge">Contact Forms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-disabled">
+                            <i class="fab fa-github"></i> Private Repo
+                        </a>
+                        <a href="#" class="btn btn-disabled">
+                            <i class="fas fa-lock"></i> In Development
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 8: Portfolio Website V1 -->
+            <article class="project-card" data-category="web-app">
+                <div class="project-image color-2">
                     <i class="fas fa-user"></i>
                     <span class="project-status status-completed">Live</span>
                 </div>
@@ -207,7 +282,8 @@
                     <h2>Portfolio Website V1</h2>
                     <p class="project-description">
                         First iteration of my portfolio website. Demonstrates fundamental web development skills 
-                        with vanilla HTML, CSS, and JavaScript. Currently being refactored with enhanced features.
+                        with vanilla HTML, CSS, and JavaScript. Currently being refactored with enhanced features 
+                        and modern design patterns.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">HTML5</span>
@@ -236,7 +312,7 @@
                 <a href="https://github.com/Edvusae" target="_blank" class="cta-btn cta-btn-primary">
                     <i class="fab fa-github"></i> View All Repositories
                 </a>
-                <button onclick="alert('WhatsApp integration needed')" class="cta-btn cta-btn-secondary">
+                <button onclick="openWhatsApp('project')" class="cta-btn cta-btn-secondary">
                     <i class="fab fa-whatsapp"></i> Discuss Your Project
                 </button>
             </div>
@@ -244,6 +320,65 @@
 
     </main>
 
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Edwin Tsembegano</h3>
+                    <p>React & Next.js Developer | Digital Marketing Strategist based in Harare, Zimbabwe.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Edvusae" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/edwin-tsembegano-13800b23a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/Edwintcreates" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web-dev">Website Development</a></li>
+                        <li><a href="services.html#systems">Web-Based Systems</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">Logo Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Get web dev tips & insights</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Edwin Tsembegano. All rights reserved.</p>
+                <p>Built with React, Next.js & passion | Deployed on Firebase</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <button onclick="openWhatsApp('project')" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script src="/js/whatsapp-config.js"></script>
     <script>
         // Filter functionality
         function filterProjects(category) {
@@ -256,17 +391,59 @@
             
             // Filter cards
             cards.forEach(card => {
+                const categories = card.dataset.category.split(' ');
                 if (category === 'all') {
                     card.style.display = 'flex';
+                    setTimeout(() => card.classList.add('fade-in'), 10);
                 } else {
-                    if (card.dataset.category === category) {
+                    if (categories.includes(category)) {
                         card.style.display = 'flex';
+                        setTimeout(() => card.classList.add('fade-in'), 10);
                     } else {
                         card.style.display = 'none';
+                        card.classList.remove('fade-in');
                     }
                 }
             });
         }
+
+        // Mobile menu
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Add fade-in animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
     </script>
 </body>
 </html>
