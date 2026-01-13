@@ -986,3 +986,455 @@
         font-size: 2.5em;
     }
 }
+
+/* ========================================
+   HOMEPAGE ADDITIONAL FIXES & ENHANCEMENTS
+   Add these to your existing homepage.css
+   ======================================== */
+
+/* ========================================
+   PROJECT ICON PLACEHOLDERS (for Featured Projects)
+   ======================================== */
+
+.project-icon-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-icon-placeholder i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* Color variations for project placeholders */
+.project-icon-placeholder.color-1 {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.project-icon-placeholder.color-2 {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.project-icon-placeholder.color-3 {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+}
+
+.project-icon-placeholder.color-4 {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.project-icon-placeholder.color-5 {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.project-icon-placeholder.color-6 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+/* ========================================
+   PROGRESS BADGE FOR IN-PROGRESS PROJECTS
+   ======================================== */
+
+.progress-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 16px;
+    background: rgba(241, 196, 15, 0.95);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+/* ========================================
+   BLOG IMAGE PLACEHOLDERS
+   ======================================== */
+
+.blog-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-image-placeholder i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.blog-image-placeholder.color-1 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+.blog-image-placeholder.color-2 {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+}
+
+.blog-image-placeholder.color-3 {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+/* ========================================
+   FEATURED PROJECTS GRID FIX
+   ======================================== */
+
+.projects-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+}
+
+.project-showcase-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-showcase-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-showcase-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-showcase-info {
+    padding: 1.5rem;
+}
+
+.project-showcase-info h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.project-showcase-info p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   ANIMATION CLASSES
+   ======================================== */
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   HERO STATS UPDATE
+   ======================================== */
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #e67e22;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+/* ========================================
+   SCROLL INDICATOR FIX
+   ======================================== */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.scroll-indicator:hover {
+    color: #e67e22;
+}
+
+/* ========================================
+   SERVICES GRID RESPONSIVE FIX
+   ======================================== */
+
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE UPDATES
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .projects-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-showcase-grid,
+    .services-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .stat-item {
+        align-items: center;
+    }
+
+    .project-showcase-image,
+    .blog-card-image {
+        height: 220px;
+    }
+
+    .project-icon-placeholder i,
+    .blog-image-placeholder i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-showcase-image,
+    .blog-card-image {
+        height: 200px;
+    }
+
+    .project-icon-placeholder i,
+    .blog-image-placeholder i {
+        font-size: 2.5rem;
+    }
+
+    .project-showcase-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-showcase-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   ENSURE CONSISTENCY WITH PROJECTS PAGE
+   ======================================== */
+
+/* Make sure Featured Projects section matches Projects page style */
+.featured-projects-showcase {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.projects-cta-center {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-view-all-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-view-all-projects:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+/* ========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    .project-showcase-card:hover,
+    .service-card-compact:hover,
+    .blog-preview-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-overlay {
+        opacity: 1;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus states */
+.project-showcase-card:focus-visible,
+.service-card-compact:focus-visible,
+.blog-preview-card:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 4px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-indicator {
+        animation: none;
+    }
+
+    .floating-shape {
+        animation: none;
+    }
+
+    .tech-card {
+        animation: none;
+    }
+
+    .gradient-animated-text {
+        animation: none;
+        background: #e67e22;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .hero-background-animation,
+    .floating-tech-cards,
+    .scroll-indicator,
+    .whatsapp-float,
+    .newsletter-form {
+        display: none !important;
+    }
+
+    .hero-section-dynamic {
+        background: white;
+        color: black;
+    }
+
+    .project-showcase-card,
+    .service-card-compact,
+    .blog-preview-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* ========================================
+   LOADING STATE (Optional)
+   ======================================== */
+
+.loading {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+   ======================================== */
+
+@media (prefers-contrast: high) {
+    .project-showcase-card,
+    .service-card-compact,
+    .blog-preview-card {
+        border: 2px solid #2c3e50;
+    }
+
+    .project-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
