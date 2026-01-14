@@ -22,6 +22,7 @@ const blogPostSchema = new mongoose.Schema({
     required: true,
     enum: ['tutorial', 'guide', 'marketing', 'tips']
   },
+
   date: { type: Date, default: Date.now },
   readTime: { type: String, required: true },
   author: { type: String, default: 'Edwin Tsembegano' },
@@ -30,7 +31,9 @@ const blogPostSchema = new mongoose.Schema({
   featured: { type: Boolean, default: false },
   content: { type: String, required: false },
   slug: { type: String, unique: true, required: true }
-}, {
+}, 
+
+{
   timestamps: true
 });
 
