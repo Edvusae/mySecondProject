@@ -50,7 +50,12 @@ const blogPostSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  slug: { type: String, unique: true, required: true }
+
+  slug: {
+    type: String,
+    unique: true,
+    required: true
+  }
 }, 
 
 {
